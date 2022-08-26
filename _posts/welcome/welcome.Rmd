@@ -9,6 +9,7 @@ author:
     affiliation: Doctorado en Fisicoquímica Molecular - UNAB - Chile
     affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
 date: 08-25-2022
+bibliography: My_Library.bib
 output:
   distill::distill_article:
     self_contained: false
@@ -45,3 +46,7 @@ Insert links like this <https://github.com/camilofm/Blog_of_Camilo>.
 Or like this [my website](https://github.com/camilofm/Blog_of_Camilo).
 
 ```What's this?``` or **this?** _or this?_
+
+##Cite papers
+
+I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavailability_2011].
