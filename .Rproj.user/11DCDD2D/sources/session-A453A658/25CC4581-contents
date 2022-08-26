@@ -50,3 +50,10 @@ Or like this [my website](https://github.com/camilofm/Blog_of_Camilo).
 ## Cite papers
 
 I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavailability_2011].
+
+## Pictures
+
+```{r,out.width="30%",fig.align='center'}
+knitr::include_graphics("pictures/escudo.png")
+```
+
