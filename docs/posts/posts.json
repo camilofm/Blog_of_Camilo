@@ -15,5 +15,22 @@
     "preview": {},
     "last_modified": "2022-08-25T22:58:00-05:00",
     "input_file": "welcome.knit.md"
+  },
+  {
+    "path": "posts/second_post/",
+    "title": "Second post ",
+    "description": "This is the second post.",
+    "author": [
+      {
+        "name": "Camilo Febres-Molina",
+        "url": "https://github.com/camilofm"
+      }
+    ],
+    "date": "2022-08-25",
+    "categories": [],
+    "contents": "\nHere I can also write something interesting for my second post.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-08-25T23:10:13-05:00",
+    "input_file": "second.knit.md"
   }
 ]
