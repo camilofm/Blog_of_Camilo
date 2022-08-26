@@ -3,7 +3,7 @@
     "path": "~/Documents/personal/GitHub/Blog_of_Camilo/_posts/welcome/welcome.Rmd",
     "project_path": "_posts/welcome/welcome.Rmd",
     "type": "r_markdown",
-    "hash": "1520096012",
+    "hash": "2709748756",
     "contents": "",
     "dirty": false,
     "created": 1661484367893.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "3,35",
+        "cursorPosition": "3,16",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1661485874,
+    "lastKnownWriteTime": 1661486009,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1661485874687,
+    "last_content_update": 1661486009127,
     "read_only": false,
     "read_only_alternatives": []
 }
