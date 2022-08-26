@@ -24,3 +24,24 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Here I can write something interesting.
 
+# My first level header
+
+Some more text could be here.
+
+## Second level header
+
+More text. More text. More text. More text. More text. More text. More text. More text. More text. More text. More text.
+
+1. First thing.
+2. Second.
+3. Third.
+
+- bullet one
+- two
+- three
+
+Insert links like this <https://github.com/camilofm/Blog_of_Camilo>.
+
+Or like this [my website](https://github.com/camilofm/Blog_of_Camilo).
+
+```What's this?``` or **this?** _or this?_
