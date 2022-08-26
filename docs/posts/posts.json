@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\nHere I can write something interesting.\nMy first level header\nSome more text could be here.\nSecond level header\nMore text. More text. More text. More text. More text. More text.\nMore text. More text. More text. More text. More text.\nFirst thing.\nSecond.\nThird.\nbullet one\ntwo\nthree\nInsert links like this https://github.com/camilofm/Blog_of_Camilo.\nOr like this my\nwebsite.\nWhat's this? or this? or\nthis?\nCite papers\nI could cite like this (Frémont\n2000). And also here (Walle\n2011).\nPictures\n\n\n\n\n\n\nFrémont, Lucie. 2000. “Biological Effects of Resveratrol.”\nLife Sciences 66 (8): 663–73.\n\n\nWalle, Thomas. 2011. “Bioavailability of Resveratrol.”\nAnnals of the New York Academy of Sciences 1215 (1): 9–15.\n\n\n\n\n",
     "preview": "posts/welcome/pictures/resv.png",
-    "last_modified": "2022-08-26T00:32:44-05:00",
+    "last_modified": "2022-08-26T09:14:47-05:00",
     "input_file": "welcome.knit.md"
   },
   {
@@ -32,5 +32,22 @@
     "preview": {},
     "last_modified": "2022-08-25T23:10:13-05:00",
     "input_file": "second.knit.md"
+  },
+  {
+    "path": "posts/third_post/",
+    "title": "Third post ",
+    "description": "This is the third post.",
+    "author": [
+      {
+        "name": "Camilo Febres-Molina",
+        "url": "https://github.com/camilofm"
+      }
+    ],
+    "date": "2022-08-25",
+    "categories": [],
+    "contents": "\n\nContents\nIntroduction\n\nIntroduction\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere\nnulla at mattis porta. Ut et nibh ex. Nunc eleifend vehicula cursus.\nQuisque dignissim sed erat nec efficitur. Pellentesque porta scelerisque\npurus ac dictum. Aenean commodo ex tortor, et vehicula diam ornare quis.\nSuspendisse scelerisque, ligula et hendrerit placerat, nisi massa\neleifend felis, ac porttitor orci odio a diam. Sed lobortis sollicitudin\ncommodo. Quisque velit mi, tempus a dui ac, gravida faucibus mauris.\nNulla egestas efficitur nulla non cursus. Fusce magna turpis, mollis ac\nvestibulum et, convallis viverra turpis. Aliquam erat volutpat. Maecenas\neu dignissim orci.\nMorbi iaculis a ipsum vel bibendum. Curabitur massa ante, rhoncus\neget magna eu, accumsan commodo nunc. Quisque massa felis, faucibus\nlacinia justo eget, euismod accumsan augue. Phasellus euismod mattis\nnisl, sed aliquet sapien feugiat a. Vestibulum tincidunt nulla a leo\nvarius blandit. Vivamus pretium risus dui, vel consequat risus gravida\nnon. Vivamus maximus tristique ultricies. Cras vitae sapien a magna\ntincidunt convallis. Mostly the purpose of this post is to show some\nbasic R scripting to manipulate and plot data.\n\nThe resveratrol molecule\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-08-26T11:48:45-05:00",
+    "input_file": "third.knit.md"
   }
 ]

@@ -1,0 +1,39 @@
+---
+title: "Third post "
+description: |
+  This is the third post.
+author:
+  - name: Camilo Febres-Molina 
+    url: https://github.com/camilofm
+    affiliation: Doctorado en Fisicoquímica Molecular - UNAB - Chile
+    affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
+date: 08-25-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    number_sections: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    fig_caption: true
+    code_folding: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere nulla at mattis porta. Ut et nibh ex. Nunc eleifend vehicula cursus. Quisque dignissim sed erat nec efficitur. Pellentesque porta scelerisque purus ac dictum. Aenean commodo ex tortor, et vehicula diam ornare quis. Suspendisse scelerisque, ligula et hendrerit placerat, nisi massa eleifend felis, ac porttitor orci odio a diam. Sed lobortis sollicitudin commodo. Quisque velit mi, tempus a dui ac, gravida faucibus mauris. Nulla egestas efficitur nulla non cursus. Fusce magna turpis, mollis ac vestibulum et, convallis viverra turpis. Aliquam erat volutpat. Maecenas eu dignissim orci.
+
+Morbi iaculis a ipsum vel bibendum. Curabitur massa ante, rhoncus eget magna eu, accumsan commodo nunc. Quisque massa felis, faucibus lacinia justo eget, euismod accumsan augue. Phasellus euismod mattis nisl, sed aliquet sapien feugiat a. Vestibulum tincidunt nulla a leo varius blandit. Vivamus pretium risus dui, vel consequat risus gravida non. Vivamus maximus tristique ultricies. Cras vitae sapien a magna tincidunt convallis. 
+Mostly the purpose of this post is to show some basic R scripting to manipulate and plot data.
+
+<figure class="image">
+   <img src="resv.png">
+   <figcaption>The resveratrol molecule</figcaption>
+ </figure>
+
+
+
