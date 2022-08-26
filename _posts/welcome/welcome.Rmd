@@ -53,7 +53,7 @@ I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavai
 
 ## Pictures
 
-```{r,out.width="30%",fig.align='center'}
-knitr::include_graphics("pictures/escudo.png")
+```{r,out.width="80%",fig.align='center'}
+knitr::include_graphics("pictures/resv.png")
 ```
 
