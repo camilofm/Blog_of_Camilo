@@ -1,19 +1,19 @@
 [
   {
     "path": "posts/welcome/",
-    "title": "Welcome to Blog_of_Camilo",
+    "title": "The Blog_of_Camilo",
     "description": "Welcome to our new blog, Blog_of_Camilo. We hope you enjoy \nreading what we have to say!",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Camilo Febres-Molina",
+        "url": "https://github.com/camilofm"
       }
     ],
     "date": "2022-08-25",
     "categories": [],
-    "contents": "\n\n\n\n",
+    "contents": "\nHere I can write something interesting.\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-08-25T22:26:05-05:00",
-    "input_file": {}
+    "last_modified": "2022-08-25T22:45:54-05:00",
+    "input_file": "welcome.knit.md"
   }
 ]
