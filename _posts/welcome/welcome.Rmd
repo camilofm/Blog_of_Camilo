@@ -1,5 +1,5 @@
 ---
-title: "The Blog of Camilo"
+title: "The first post"
 description: |
   Welcome to the Blog of Camilo. We hope you enjoy 
   reading what we have to say!
