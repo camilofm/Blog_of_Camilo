@@ -1,15 +1,14 @@
 ---
-title: "The first post"
+title: "Análisis post producción de la dinámica molecular con Gromacs - Tutorial"
 description: |
-  Welcome to the Blog of Camilo. We hope you enjoy 
-  reading what we have to say!
+  Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD.
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
     affiliation: Doctorado en Fisicoquímica Molecular - UNAB - Chile
     affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
 date: 08-25-2022
-bibliography: My_Library.bib
+bibliography: tutorial_gromacs.bib
 output:
   distill::distill_article:
     self_contained: false

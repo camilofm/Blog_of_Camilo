@@ -86,32 +86,11 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
-<style>
-  div.csl-bib-body { }
-  div.csl-entry {
-    clear: both;
-    }
-  .hanging div.csl-entry {
-    margin-left:2em;
-    text-indent:-2em;
-  }
-  div.csl-left-margin {
-    min-width:2em;
-    float:left;
-  }
-  div.csl-right-inline {
-    margin-left:2em;
-    padding-left:1em;
-  }
-  div.csl-indent {
-    margin-left: 2em;
-  }
-</style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>The first post</title>
+  <title>Análisis post producción de la dinámica molecular con Gromacs - Tutorial</title>
 
-  <meta property="description" itemprop="description" content="Welcome to the Blog of Camilo. We hope you enjoy &#10;reading what we have to say!"/>
+  <meta property="description" itemprop="description" content="Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD."/>
 
 
   <!--  https://schema.org/Article -->
@@ -120,27 +99,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="Camilo Febres-Molina"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="The first post"/>
+  <meta property="og:title" content="Análisis post producción de la dinámica molecular con Gromacs - Tutorial"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Welcome to the Blog of Camilo. We hope you enjoy &#10;reading what we have to say!"/>
+  <meta property="og:description" content="Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="The first post"/>
-  <meta property="twitter:description" content="Welcome to the Blog of Camilo. We hope you enjoy &#10;reading what we have to say!"/>
+  <meta property="twitter:title" content="Análisis post producción de la dinámica molecular con Gromacs - Tutorial"/>
+  <meta property="twitter:description" content="Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD."/>
 
   <!--/radix_placeholder_meta_tags-->
   
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["The first post"]},{"type":"character","attributes":{},"value":["Welcome to the Blog of Camilo. We hope you enjoy \nreading what we have to say!\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["08-25-2022"]},{"type":"character","attributes":{},"value":["My_Library.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Análisis post producción de la dinámica molecular con Gromacs - Tutorial"]},{"type":"character","attributes":{},"value":["Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["08-25-2022"]},{"type":"character","attributes":{},"value":["tutorial_gromacs.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["My_Library.bib","pictures/resv.png","welcome_files/anchor-4.2.2/anchor.min.js","welcome_files/bowser-1.9.3/bowser.min.js","welcome_files/distill-2.2.21/template.v2.js","welcome_files/header-attrs-2.16/header-attrs.js","welcome_files/jquery-3.6.0/jquery-3.6.0.js","welcome_files/jquery-3.6.0/jquery-3.6.0.min.js","welcome_files/jquery-3.6.0/jquery-3.6.0.min.map","welcome_files/popper-2.6.0/popper.min.js","welcome_files/tippy-6.2.7/tippy-bundle.umd.min.js","welcome_files/tippy-6.2.7/tippy-light-border.css","welcome_files/tippy-6.2.7/tippy.css","welcome_files/tippy-6.2.7/tippy.umd.min.js","welcome_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["pictures/resv.png","tutorial_gromacs_files/anchor-4.2.2/anchor.min.js","tutorial_gromacs_files/bowser-1.9.3/bowser.min.js","tutorial_gromacs_files/distill-2.2.21/template.v2.js","tutorial_gromacs_files/header-attrs-2.16/header-attrs.js","tutorial_gromacs_files/jquery-3.6.0/jquery-3.6.0.js","tutorial_gromacs_files/jquery-3.6.0/jquery-3.6.0.min.js","tutorial_gromacs_files/jquery-3.6.0/jquery-3.6.0.min.map","tutorial_gromacs_files/popper-2.6.0/popper.min.js","tutorial_gromacs_files/tippy-6.2.7/tippy-bundle.umd.min.js","tutorial_gromacs_files/tippy-6.2.7/tippy-light-border.css","tutorial_gromacs_files/tippy-6.2.7/tippy.css","tutorial_gromacs_files/tippy-6.2.7/tippy.umd.min.js","tutorial_gromacs_files/webcomponents-2.0.0/webcomponents.js","tutorial_gromacs.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1490,16 +1469,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="welcome_files/header-attrs-2.16/header-attrs.js"></script>
-  <script src="welcome_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <script src="welcome_files/popper-2.6.0/popper.min.js"></script>
-  <link href="welcome_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="welcome_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="welcome_files/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="welcome_files/anchor-4.2.2/anchor.min.js"></script>
-  <script src="welcome_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="welcome_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="welcome_files/distill-2.2.21/template.v2.js"></script>
+  <script src="tutorial_gromacs_files/header-attrs-2.16/header-attrs.js"></script>
+  <script src="tutorial_gromacs_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="tutorial_gromacs_files/popper-2.6.0/popper.min.js"></script>
+  <link href="tutorial_gromacs_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="tutorial_gromacs_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="tutorial_gromacs_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="tutorial_gromacs_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="tutorial_gromacs_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="tutorial_gromacs_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="tutorial_gromacs_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -1511,7 +1490,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"The first post","description":"Welcome to the Blog of Camilo. We hope you enjoy \nreading what we have to say!","authors":[{"author":"Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-08-25T00:00:00.000-05:00","citationText":"Febres-Molina, 2022"}
+{"title":"Análisis post producción de la dinámica molecular con Gromacs - Tutorial","description":"Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD.","authors":[{"author":"Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-08-25T00:00:00.000-05:00","citationText":"Febres-Molina, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1521,11 +1500,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>The first post</h1>
+<h1>Análisis post producción de la dinámica molecular con Gromacs - Tutorial</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Welcome to the Blog of Camilo. We hope you enjoy reading what we
-have to say!</p></p>
+<p><p>Aquí veremos paso a paso cómo es que podemos utilizar la suite
+Gromacs para el análisis post producción de una dinámica molecular
+realizada con los programas Gromacs, CHARMM o NAMD.</p></p>
 </div>
 
 <div class="d-byline">
@@ -1565,30 +1545,18 @@ this?</em></p>
 <h2 id="cite-papers">Cite papers</h2>
 <p>I could cite like this <span class="citation"
 data-cites="fremont_biological_2000">(<a
-href="#ref-fremont_biological_2000" role="doc-biblioref">Frémont
-2000</a>)</span>. And also here <span class="citation"
+href="#ref-fremont_biological_2000"
+role="doc-biblioref"><strong>fremont_biological_2000?</strong></a>)</span>.
+And also here <span class="citation"
 data-cites="walle_bioavailability_2011">(<a
-href="#ref-walle_bioavailability_2011" role="doc-biblioref">Walle
-2011</a>)</span>.</p>
+href="#ref-walle_bioavailability_2011"
+role="doc-biblioref"><strong>walle_bioavailability_2011?</strong></a>)</span>.</p>
 <h2 id="pictures">Pictures</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pictures/resv.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="doc-bibliography">
-<div id="ref-fremont_biological_2000" class="csl-entry"
-role="doc-biblioentry">
-Frémont, Lucie. 2000. <span>“Biological Effects of Resveratrol.”</span>
-<em>Life Sciences</em> 66 (8): 663–73.
-</div>
-<div id="ref-walle_bioavailability_2011" class="csl-entry"
-role="doc-biblioentry">
-Walle, Thomas. 2011. <span>“Bioavailability of Resveratrol.”</span>
-<em>Annals of the New York Academy of Sciences</em> 1215 (1): 9–15.
-</div>
-</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
