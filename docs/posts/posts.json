@@ -14,7 +14,7 @@
     "contents": "\nHere I can also write something interesting for my second post.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-08-25T23:10:13-05:00",
-    "input_file": "second.knit.md"
+    "input_file": {}
   },
   {
     "path": "posts/third_post/",
@@ -31,7 +31,7 @@
     "contents": "\n\nContents\nIntroduction\n\nIntroduction\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere\nnulla at mattis porta. Ut et nibh ex. Nunc eleifend vehicula cursus.\nQuisque dignissim sed erat nec efficitur. Pellentesque porta scelerisque\npurus ac dictum. Aenean commodo ex tortor, et vehicula diam ornare quis.\nSuspendisse scelerisque, ligula et hendrerit placerat, nisi massa\neleifend felis, ac porttitor orci odio a diam. Sed lobortis sollicitudin\ncommodo. Quisque velit mi, tempus a dui ac, gravida faucibus mauris.\nNulla egestas efficitur nulla non cursus. Fusce magna turpis, mollis ac\nvestibulum et, convallis viverra turpis. Aliquam erat volutpat. Maecenas\neu dignissim orci.\nMorbi iaculis a ipsum vel bibendum. Curabitur massa ante, rhoncus\neget magna eu, accumsan commodo nunc. Quisque massa felis, faucibus\nlacinia justo eget, euismod accumsan augue. Phasellus euismod mattis\nnisl, sed aliquet sapien feugiat a. Vestibulum tincidunt nulla a leo\nvarius blandit. Vivamus pretium risus dui, vel consequat risus gravida\nnon. Vivamus maximus tristique ultricies. Cras vitae sapien a magna\ntincidunt convallis. Mostly the purpose of this post is to show some\nbasic R scripting to manipulate and plot data.\n\nThe resveratrol molecule\n\n\n\n",
     "preview": {},
     "last_modified": "2022-08-26T11:48:45-05:00",
-    "input_file": "third.knit.md"
+    "input_file": {}
   },
   {
     "path": "posts/tutorial_gromacs/",
@@ -45,9 +45,9 @@
     ],
     "date": "2022-08-25",
     "categories": [],
-    "contents": "\nHere I can write something interesting.\nMy first level header\nSome more text could be here.\nSecond level header\nMore text. More text. More text. More text. More text. More text.\nMore text. More text. More text. More text. More text.\nFirst thing.\nSecond.\nThird.\nbullet one\ntwo\nthree\nInsert links like this https://github.com/camilofm/Blog_of_Camilo.\nOr like this my\nwebsite.\nWhat's this? or this? or\nthis?\nCite papers\nI could cite like this (fremont_biological_2000?).\nAnd also here (walle_bioavailability_2011?).\nPictures\n\n\n\n\n\n\n",
-    "preview": "posts/tutorial_gromacs/pictures/resv.png",
-    "last_modified": "2022-10-02T19:19:17-05:00",
+    "contents": "\nMy first level header\nSome more text could be here.\nSecond level header\nMore text. More text. More text. More text. More text. More text.\nMore text. More text. More text. More text. More text.\nFirst thing.\nSecond.\nThird.\nbullet one\ntwo\nthree\nInsert links like this https://github.com/camilofm/Blog_of_Camilo.\nOr like this my\nwebsite.\nWhat's this? or this? or\nthis?\nCite papers\nI could cite like this (fremont_biological_2000?).\nAnd also here (walle_bioavailability_2011?).\nPictures\n\n\n\n\n\n\n",
+    "preview": "posts/tutorial_gromacs/pictures/gromacs.png",
+    "last_modified": "2022-10-02T20:01:25-05:00",
     "input_file": "tutorial_gromacs.knit.md"
   }
 ]

@@ -22,8 +22,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-Here I can write something interesting.
-
 # My first level header
 
 Some more text could be here.
@@ -53,6 +51,6 @@ I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavai
 ## Pictures
 
 ```{r,out.width="80%",fig.align='center'}
-knitr::include_graphics("pictures/resv.png")
+knitr::include_graphics("pictures/gromacs.png")
 ```
 
