@@ -45,7 +45,9 @@ El presente tutorial abarcará los siguientes análisis post producción de la M
 - Densidad
 - Enlaces de hidrógeno
 
+<p style='text-align: right;'>
 # Indicaciones y recomendaciones iniciales
+</p>
 
 Antes de iniciar con los diferentes análisis se debe tener en cuenta que la trayectoria a utilizar sea la óptima, por ejemplo, que no contenga “saltos” o algunas moléculas que parecieran estar “rotas” debido a la periodicidad de contorno (PBC) durante la MD.
 Por lo que es una buena práctica realizar la revisión de dicha trayectoria (en algún visualizador, como VMD) o, en su defecto, utilizar el programa trjconv para restaurar dichos “saltos” o “rupturas” como veremos en el punto 2.
