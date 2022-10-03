@@ -88,9 +88,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Estimador de Energía Libre de Unión (BFEE - Plugin de VMD): Tutorial de uso</title>
+  <title>Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso</title>
 
-  <meta property="description" itemprop="description" content="Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD y obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF)."/>
+  <meta property="description" itemprop="description" content="Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF)."/>
 
 
   <!--  https://schema.org/Article -->
@@ -99,26 +99,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="Camilo Febres-Molina"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Estimador de Energía Libre de Unión (BFEE - Plugin de VMD): Tutorial de uso"/>
+  <meta property="og:title" content="Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD y obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF)."/>
+  <meta property="og:description" content="Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF)."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Estimador de Energía Libre de Unión (BFEE - Plugin de VMD): Tutorial de uso"/>
-  <meta property="twitter:description" content="Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD y obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF)."/>
+  <meta property="twitter:title" content="Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso"/>
+  <meta property="twitter:description" content="Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF)."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Estimador de Energía Libre de Unión (BFEE - Plugin de VMD): Tutorial de uso"]},{"type":"character","attributes":{},"value":["Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD y obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF).\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["09-01-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso"]},{"type":"character","attributes":{},"value":["Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF).\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["09-01-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["second_files/anchor-4.2.2/anchor.min.js","second_files/bowser-1.9.3/bowser.min.js","second_files/distill-2.2.21/template.v2.js","second_files/header-attrs-2.16/header-attrs.js","second_files/jquery-3.6.0/jquery-3.6.0.js","second_files/jquery-3.6.0/jquery-3.6.0.min.js","second_files/jquery-3.6.0/jquery-3.6.0.min.map","second_files/popper-2.6.0/popper.min.js","second_files/tippy-6.2.7/tippy-bundle.umd.min.js","second_files/tippy-6.2.7/tippy-light-border.css","second_files/tippy-6.2.7/tippy.css","second_files/tippy-6.2.7/tippy.umd.min.js","second_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["tutorial_bfee_files/anchor-4.2.2/anchor.min.js","tutorial_bfee_files/bowser-1.9.3/bowser.min.js","tutorial_bfee_files/distill-2.2.21/template.v2.js","tutorial_bfee_files/header-attrs-2.16/header-attrs.js","tutorial_bfee_files/jquery-3.6.0/jquery-3.6.0.js","tutorial_bfee_files/jquery-3.6.0/jquery-3.6.0.min.js","tutorial_bfee_files/jquery-3.6.0/jquery-3.6.0.min.map","tutorial_bfee_files/popper-2.6.0/popper.min.js","tutorial_bfee_files/tippy-6.2.7/tippy-bundle.umd.min.js","tutorial_bfee_files/tippy-6.2.7/tippy-light-border.css","tutorial_bfee_files/tippy-6.2.7/tippy.css","tutorial_bfee_files/tippy-6.2.7/tippy.umd.min.js","tutorial_bfee_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1468,16 +1468,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="second_files/header-attrs-2.16/header-attrs.js"></script>
-  <script src="second_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <script src="second_files/popper-2.6.0/popper.min.js"></script>
-  <link href="second_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="second_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="second_files/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="second_files/anchor-4.2.2/anchor.min.js"></script>
-  <script src="second_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="second_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="second_files/distill-2.2.21/template.v2.js"></script>
+  <script src="tutorial_bfee_files/header-attrs-2.16/header-attrs.js"></script>
+  <script src="tutorial_bfee_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="tutorial_bfee_files/popper-2.6.0/popper.min.js"></script>
+  <link href="tutorial_bfee_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="tutorial_bfee_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="tutorial_bfee_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="tutorial_bfee_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="tutorial_bfee_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="tutorial_bfee_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="tutorial_bfee_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -1489,7 +1489,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Estimador de Energía Libre de Unión (BFEE - Plugin de VMD): Tutorial de uso","description":"Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD y obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF).","authors":[{"author":"Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-09-01T00:00:00.000-05:00","citationText":"Febres-Molina, 2022"}
+{"title":"Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso","description":"Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF).","authors":[{"author":"Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-09-01T00:00:00.000-05:00","citationText":"Febres-Molina, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1499,13 +1499,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Estimador de Energía Libre de Unión (BFEE - Plugin de VMD): Tutorial de uso</h1>
+<h1>Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera
 sencilla para generar archivos de entrada y así poder correr los
-cálculos MD y obtener el Delta Gº de unión por medio del Potencial de
-Fuerza Medio (PMF).</p></p>
+cálculos MD del sistema en estudio y así obtener el Delta Gº de unión
+por medio del Potencial de Fuerza Medio (PMF).</p></p>
 </div>
 
 <div class="d-byline">

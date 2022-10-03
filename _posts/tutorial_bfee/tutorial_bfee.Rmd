@@ -1,7 +1,7 @@
 ---
-title: "Estimador de Energía Libre de Unión (BFEE - Plugin de VMD): Tutorial de uso"
+title: "Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso"
 description: |
-  Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD y obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF).
+  Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF).
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
