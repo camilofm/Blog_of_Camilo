@@ -1,7 +1,7 @@
 name: "C3"
 title: "C3"
 description: |
-  
+  El Blog de Química Computacional de Camilo
 output_dir: "docs"
 navbar:
   right:

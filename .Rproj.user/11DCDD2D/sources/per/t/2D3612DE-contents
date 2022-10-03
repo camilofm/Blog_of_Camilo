@@ -1,0 +1,9 @@
+---
+title: "Acerca de este blog"
+description: |
+ Este blog tiene por objetivo inicial compartir el conocimiento científico generado en un ambiente virtual que facilite su distribución y a su vez sirva como repositorio de esta información. Luego, mi propósito es el de generar contenido relativo a mi especialidad que sea asequible para todo público. Eventualmente, crear contenido en redes sociales que se base en este mismo propósito, y así, poder difundir el área de conocimiento que tanto me apasiona.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
