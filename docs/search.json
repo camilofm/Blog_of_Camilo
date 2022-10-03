@@ -10,10 +10,10 @@
     },
     {
       "path": "index.html",
-      "title": "El Blog de Química Computacional de Camilo",
+      "title": "El Blog de Química Computacional de Camilo: C³",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-10-03T12:30:11-05:00"
+      "last_modified": "2022-10-03T12:32:44-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
