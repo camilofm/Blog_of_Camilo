@@ -1,7 +1,7 @@
 ---
 title: "Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso"
 description: |
-  Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el Delta Gº de unión por medio del Potencial de Fuerza Medio (PMF).
+  Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el &Delta;Gº de unión por medio del Potencial de Fuerza Medio (PMF).
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
@@ -25,7 +25,7 @@ _Este tutorial fue realizado con la colaboración de [Leslie Sanchez](https://sc
 
 <br/>
 
-El plugin BFEE permite la generación de archivos de entrada para realizar el cálculo de ΔGbinding absoluta en NAMD usando variables colectivas. Los archivos de entrada se generan en el software VMD, con lo cual se generarán los archivos necesarios para realizar los cálculos de 8 carpetas. Posteriormente, el plugin permite el procesamiento de los datos.
+El plugin BFEE permite la generación de archivos de entrada para realizar el cálculo de &Delta;G absoluto de unión en NAMD usando variables colectivas. Los archivos de entrada se generan en el software VMD, con lo cual se generarán los archivos necesarios para realizar los cálculos de 8 carpetas. Posteriormente, el plugin permite el procesamiento de los datos.
 
 El plugin se debe descargar desde la SI del artículo “BFEE: A User-Friendly Graphical Interface Facilitating Absolute Binding Free-Energy Calculations Haohao Fu, James C. Gumbart, Haochuan Chen, Xueguang Shao, Wensheng Cai, and Christophe Chipot, Journal of Chemical Information and Modeling 2018 58 (3), 556-560” → <https://pubs.acs.org/doi/pdf/10.1021/acs.jcim.7b00695>
 
