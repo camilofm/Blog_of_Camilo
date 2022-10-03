@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-_Este tutorial fue realizado con la colaboración de [Leslie Sanchez](https://scholar.google.com.pe/citations?user=cM-RWEYAAAAJ&hl=es&oi=ao)._
+_Este tutorial fue realizado en colaboración con [Leslie Sanchez](https://scholar.google.com.pe/citations?user=cM-RWEYAAAAJ&hl=es&oi=ao)._
 
 <br/>
 
@@ -43,7 +43,9 @@ En cada carpeta habrá un archivo de configuración “abf.conf” que es el que
 
 Además, en cada carpeta existe el archivo colvar.in, que tiene la información de las variables colectivas. Luego de algunos ensayos se observó que es necesario agregar los keywords “lowerWall” y “upperWall” luego de la información de lower y upperboundary, (los valores de los keywords mencionados deben ser iguales, como se muestra a continuación en un ejemplo:
 
-
+```{r,out.width="70%",fig.align='center'}
+knitr::include_graphics("pictures/ejemplo.png")
+```
 
 Con esto listo se deben correr las carpetas desde la 001 a la 008 de forma sucesiva.
 
