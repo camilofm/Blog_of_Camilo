@@ -1,7 +1,7 @@
-name: "Blog_of_Camilo"
-title: "Blog_of_Camilo"
+name: "C3"
+title: "C3"
 description: |
-  Blog_of_Camilo
+  
 output_dir: "docs"
 navbar:
   right:
