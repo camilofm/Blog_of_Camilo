@@ -86,6 +86,27 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
 <title>C3: Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso</title>
@@ -111,10 +132,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="twitter:description" content="Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el &amp;Delta;Gº de unión por medio del Potencial de Fuerza Medio (PMF)."/>
 
 <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=BFEE: A user-friendly graphical interface facilitating absolute binding free-energy calculations;citation_publication_date=2018;citation_publisher=ACS Publications;citation_volume=58;citation_author=Haohao Fu;citation_author=James C Gumbart;citation_author=Haochuan Chen;citation_author=Xueguang Shao;citation_author=Wensheng Cai;citation_author=Christophe Chipot"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso"]},{"type":"character","attributes":{},"value":["Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el &Delta;Gº de unión por medio del Potencial de Fuerza Medio (PMF)."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["09-01-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso"]},{"type":"character","attributes":{},"value":["Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el &Delta;Gº de unión por medio del Potencial de Fuerza Medio (PMF)."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["09-01-2022"]},{"type":"character","attributes":{},"value":["bfee.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2152,17 +2175,17 @@ Sanchez</a>.</em></p>
 </div>
 <p>El plugin BFEE permite la generación de archivos de entrada para
 realizar el cálculo de ΔG absoluto de unión en NAMD usando variables
-colectivas. Los archivos de entrada se generan en el software VMD, con
-lo cual se generarán los archivos necesarios para realizar los cálculos
-de 8 carpetas. Posteriormente, el plugin permite el procesamiento de los
+colectivas <span class="citation" data-cites="fu2018bfee">(<a
+href="#ref-fu2018bfee" role="doc-biblioref">Fu et al. 2018</a>)</span>.
+Los archivos de entrada se generan en el software VMD, con lo cual se
+generarán los archivos necesarios para realizar los cálculos de 8
+carpetas. Posteriormente, el plugin permite el procesamiento de los
 datos.</p>
-<p>El plugin se debe descargar desde la SI del artículo “BFEE: A
+<p>El plugin se debe descargar desde la SI del artículo colocado en la
+sección final de Referencias, y que titula: <a
+href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00695">“BFEE: A
 User-Friendly Graphical Interface Facilitating Absolute Binding
-Free-Energy Calculations Haohao Fu, James C. Gumbart, Haochuan Chen,
-Xueguang Shao, Wensheng Cai, and Christophe Chipot, Journal of Chemical
-Information and Modeling 2018 58 (3), 556-560” → <a
-href="https://pubs.acs.org/doi/pdf/10.1021/acs.jcim.7b00695"
-class="uri">https://pubs.acs.org/doi/pdf/10.1021/acs.jcim.7b00695</a></p>
+Free-Energy Calculations”.</a></p>
 <p>En la SI también se encuentran las instrucciones de instalación tanto
 para Windows como para Linux y OSX. (En nuestra experiencia este Plugin
 responde mejor en Ubuntu que en Windows.)</p>
@@ -2236,10 +2259,18 @@ outputs).</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pictures/resultado.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<p><a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00695"
-class="uri">https://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00695</a></p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-fu2018bfee" class="csl-entry" role="doc-biblioentry">
+Fu, Haohao, James C Gumbart, Haochuan Chen, Xueguang Shao, Wensheng Cai,
+and Christophe Chipot. 2018. <span>“BFEE: A User-Friendly Graphical
+Interface Facilitating Absolute Binding Free-Energy
+Calculations.”</span> <em>Journal of Chemical Information and
+Modeling</em> 58 (3): 556–60.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2251,7 +2282,10 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+  <h3 id="references">References</h3>
+  <div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
