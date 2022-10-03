@@ -235,40 +235,15 @@ Finalmente, cabe mencionar que se puede utilizar el programa make_ndx para selec
 
 
 
+#Insert links like this <https://github.com/camilofm/Blog_of_Camilo>.
 
+#Or like this [my website](https://github.com/camilofm/Blog_of_Camilo).
 
+#```What's this?``` or **this?** _or this?_
 
+#Cite papers
 
-
-
-
-
-
-
-
-
-
-## Second level header
-
-More text. More text. More text. More text. More text. More text. More text. More text. More text. More text. More text.
-
-1. First thing.
-2. Second.
-3. Third.
-
-- bullet one
-- two
-- three
-
-Insert links like this <https://github.com/camilofm/Blog_of_Camilo>.
-
-Or like this [my website](https://github.com/camilofm/Blog_of_Camilo).
-
-```What's this?``` or **this?** _or this?_
-
-## Cite papers
-
-I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavailability_2011].
+#I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavailability_2011].
 
 
 
