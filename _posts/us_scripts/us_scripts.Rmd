@@ -1,7 +1,7 @@
 ---
 title: "Scripts en Bash para realizar cálculos Umbrella Sampling (QM/MM MD)"
 description: |
-  En éste post veremos 
+  En éste post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando.
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
@@ -19,19 +19,21 @@ output:
     code_folding: true
 ---
 
+<style>
+body {
+text-align: justify}
+</style>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Introduction
+# Indicaciones iniciales
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere nulla at mattis porta. Ut et nibh ex. Nunc eleifend vehicula cursus. Quisque dignissim sed erat nec efficitur. Pellentesque porta scelerisque purus ac dictum. Aenean commodo ex tortor, et vehicula diam ornare quis. Suspendisse scelerisque, ligula et hendrerit placerat, nisi massa eleifend felis, ac porttitor orci odio a diam. Sed lobortis sollicitudin commodo. Quisque velit mi, tempus a dui ac, gravida faucibus mauris. Nulla egestas efficitur nulla non cursus. Fusce magna turpis, mollis ac vestibulum et, convallis viverra turpis. Aliquam erat volutpat. Maecenas eu dignissim orci.
 
-Morbi iaculis a ipsum vel bibendum. Curabitur massa ante, rhoncus eget magna eu, accumsan commodo nunc. Quisque massa felis, faucibus lacinia justo eget, euismod accumsan augue. Phasellus euismod mattis nisl, sed aliquet sapien feugiat a. Vestibulum tincidunt nulla a leo varius blandit. Vivamus pretium risus dui, vel consequat risus gravida non. Vivamus maximus tristique ultricies. Cras vitae sapien a magna tincidunt convallis. 
-Mostly the purpose of this post is to show some basic R scripting to manipulate and plot data.
 
 <figure class="image">
-   <img src="resv.png">
+   <img src="pictures/resv.png" alt="pictures/resv" style="width:200px;"/>
    <figcaption>The resveratrol molecule</figcaption>
  </figure>
 
