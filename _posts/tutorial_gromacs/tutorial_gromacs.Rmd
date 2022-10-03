@@ -32,7 +32,7 @@ knitr::include_graphics("pictures/gromacs.png")
 ```
 
 Existen muchas metodologías, softwares y servidores en línea diseñados para analizar la trayectoria obtenida luego de la producción de una dinámica molecular (MD) para, así, obtener información que dé cuenta de la estabilidad de dicha corrida en un período específico, las fluctuaciones de ciertos residuos, entre otros.
-Sin embargo, el paquete de software Gromacs nos permite, en un solo lugar, realizar todos estos análisis y muchos otros de forma relativamente simple y utilizando la línea de comandos.
+Sin embargo, el [paquete de software Gromacs](https://www.gromacs.org/) nos permite, en un solo lugar, realizar todos estos análisis y muchos otros de forma relativamente simple y utilizando la línea de comandos [@gromacs1; @gromacs2].
 
 El presente tutorial abarcará los siguientes análisis post producción de la MD:
 

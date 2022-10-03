@@ -86,6 +86,27 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
   <title>Análisis post producción de la dinámica molecular con Gromacs - Tutorial</title>
@@ -111,6 +132,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_meta_tags-->
   
+  <meta name="citation_reference" content="citation_title=GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers;citation_publication_date=2015;citation_publisher=Elsevier;citation_volume=1;citation_author=Mark James Abraham;citation_author=Teemu Murtola;citation_author=Roland Schulz;citation_author=Szilárd Páll;citation_author=Jeremy C Smith;citation_author=Berk Hess;citation_author=Erik Lindahl"/>
+  <meta name="citation_reference" content="citation_title=Heterogeneous parallelization and acceleration of molecular dynamics simulations in GROMACS;citation_publication_date=2020;citation_publisher=AIP Publishing LLC;citation_volume=153;citation_author=Szilárd Páll;citation_author=Artem Zhmurov;citation_author=Paul Bauer;citation_author=Mark Abraham;citation_author=Magnus Lundborg;citation_author=Alan Gray;citation_author=Berk Hess;citation_author=Erik Lindahl"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
@@ -1530,10 +1553,13 @@ text-align: justify}
 diseñados para analizar la trayectoria obtenida luego de la producción
 de una dinámica molecular (MD) para, así, obtener información que dé
 cuenta de la estabilidad de dicha corrida en un período específico, las
-fluctuaciones de ciertos residuos, entre otros. Sin embargo, el paquete
-de software Gromacs nos permite, en un solo lugar, realizar todos estos
-análisis y muchos otros de forma relativamente simple y utilizando la
-línea de comandos.</p>
+fluctuaciones de ciertos residuos, entre otros. Sin embargo, el <a
+href="https://www.gromacs.org/">paquete de software Gromacs</a> nos
+permite, en un solo lugar, realizar todos estos análisis y muchos otros
+de forma relativamente simple y utilizando la línea de comandos <span
+class="citation" data-cites="gromacs1 gromacs2">(<a href="#ref-gromacs1"
+role="doc-biblioref">Abraham et al. 2015</a>; <a href="#ref-gromacs2"
+role="doc-biblioref">Páll et al. 2020</a>)</span>.</p>
 <p>El presente tutorial abarcará los siguientes análisis post producción
 de la MD:</p>
 <ul>
@@ -1866,6 +1892,22 @@ línea de comandos lo siguiente: -n index.ndx.</p>
 </code></pre>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-gromacs1" class="csl-entry" role="doc-biblioentry">
+Abraham, Mark James, Teemu Murtola, Roland Schulz, Szilárd Páll, Jeremy
+C Smith, Berk Hess, and Erik Lindahl. 2015. <span>“GROMACS: High
+Performance Molecular Simulations Through Multi-Level Parallelism from
+Laptops to Supercomputers.”</span> <em>SoftwareX</em> 1: 19–25.
+</div>
+<div id="ref-gromacs2" class="csl-entry" role="doc-biblioentry">
+Páll, Szilárd, Artem Zhmurov, Paul Bauer, Mark Abraham, Magnus Lundborg,
+Alan Gray, Berk Hess, and Erik Lindahl. 2020. <span>“Heterogeneous
+Parallelization and Acceleration of Molecular Dynamics Simulations in
+GROMACS.”</span> <em>The Journal of Chemical Physics</em> 153 (13):
+134110.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

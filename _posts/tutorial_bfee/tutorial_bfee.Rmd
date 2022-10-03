@@ -35,7 +35,7 @@ _Este tutorial fue realizado en colaboración con [Leslie Sanchez](https://schol
 knitr::include_graphics("pictures/bfee.png")
 ```
 
-El plugin BFEE permite la generación de archivos de entrada para realizar el cálculo de &Delta;G absoluto de unión en NAMD usando variables colectivas [@fu2018bfee]. Los archivos de entrada se generan en el software VMD, con lo cual se generarán los archivos necesarios para realizar los cálculos de 8 carpetas. Posteriormente, el plugin permite el procesamiento de los datos.
+El plugin BFEE permite la generación de archivos de entrada para realizar el cálculo de &Delta;G absoluto de unión en NAMD usando variables colectivas [@bfee]. Los archivos de entrada se generan en el software VMD, con lo cual se generarán los archivos necesarios para realizar los cálculos de 8 carpetas. Posteriormente, el plugin permite el procesamiento de los datos.
 
 El plugin se debe descargar desde la SI del artículo colocado en la sección final de Referencias, y que titula: ["BFEE: A User-Friendly Graphical Interface Facilitating Absolute Binding Free-Energy Calculations".](https://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00695)
 
