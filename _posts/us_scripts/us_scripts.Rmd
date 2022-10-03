@@ -1,13 +1,13 @@
 ---
-title: "Third post "
+title: "Scripts en Bash para realizar cálculos Umbrella Sampling (QM/MM MD)"
 description: |
-  This is the third post.
+  En éste post veremos 
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
     affiliation: Doctorado en Fisicoquímica Molecular - UNAB - Chile
     affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
-date: 08-25-2022
+date: 09-20-2022
 output:
   distill::distill_article:
     self_contained: false
