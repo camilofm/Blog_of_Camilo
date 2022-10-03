@@ -10,10 +10,10 @@
     },
     {
       "path": "index.html",
-      "title": "Blog of Camilo",
+      "title": "El Blog de Química Computacional de Camilo",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-10-02T19:19:17-05:00"
+      "last_modified": "2022-10-03T11:59:50-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

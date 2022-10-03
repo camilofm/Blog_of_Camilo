@@ -1,5 +1,5 @@
 ---
-title: "Blog of Camilo"
+title: "El Blog de Química Computacional de Camilo"
 site: distill::distill_website
 listing: posts
 ---
