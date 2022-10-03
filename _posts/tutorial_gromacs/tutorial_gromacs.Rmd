@@ -45,9 +45,10 @@ El presente tutorial abarcará los siguientes análisis post producción de la M
 - Densidad
 - Enlaces de hidrógeno
 
-<p style='text-align: right;'>
+<style>
+text-align: justify
 # Indicaciones y recomendaciones iniciales
-</p>
+</style>
 
 Antes de iniciar con los diferentes análisis se debe tener en cuenta que la trayectoria a utilizar sea la óptima, por ejemplo, que no contenga “saltos” o algunas moléculas que parecieran estar “rotas” debido a la periodicidad de contorno (PBC) durante la MD.
 Por lo que es una buena práctica realizar la revisión de dicha trayectoria (en algún visualizador, como VMD) o, en su defecto, utilizar el programa trjconv para restaurar dichos “saltos” o “rupturas” como veremos en el punto 2.
@@ -296,17 +297,17 @@ Finalmente, cabe mencionar que se puede utilizar el programa make_ndx para selec
 
 
 
+```
+# Insert links like this <https://github.com/camilofm/Blog_of_Camilo>.
 
-#Insert links like this <https://github.com/camilofm/Blog_of_Camilo>.
+# Or like this [my website](https://github.com/camilofm/Blog_of_Camilo).
+ 
+# ```What's this?``` or **this?** _or this?_
 
-#Or like this [my website](https://github.com/camilofm/Blog_of_Camilo).
+# Cite papers
 
-#```What's this?``` or **this?** _or this?_
+# I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavailability_2011].
 
-#Cite papers
-
-#I could cite like this [@fremont_biological_2000]. And also here [@walle_bioavailability_2011].
-
-
+```
 
 
