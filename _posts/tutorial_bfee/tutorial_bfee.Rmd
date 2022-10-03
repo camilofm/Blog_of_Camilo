@@ -53,7 +53,7 @@ En cada carpeta habrá un archivo de configuración “abf.conf” que es el que
 
 Además, en cada carpeta existe el archivo colvar.in, que tiene la información de las variables colectivas. Luego de algunos ensayos se observó que es necesario agregar los keywords “lowerWall” y “upperWall” luego de la información de lower y upperboundary, (los valores de los keywords mencionados deben ser iguales, como se muestra a continuación en un ejemplo:
 
-```{r,out.width="70%",fig.align='center'}
+```{r,out.width="50%",fig.align='center'}
 knitr::include_graphics("pictures/ejemplo.png")
 ```
 
