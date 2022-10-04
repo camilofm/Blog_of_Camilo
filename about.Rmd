@@ -4,6 +4,8 @@ description: |
  Este blog tiene por objetivo inicial compartir el conocimiento científico generado por mí en un ambiente virtual que facilite su distribución y a su vez sirva como repositorio de esta información.
  
  Luego, mi propósito es el de generar contenido relativo a mi especialidad que sea asequible para todo público. Eventualmente, crear contenido en redes sociales que se base en este mismo propósito, y así, poder difundir el área de conocimiento que tanto me apasiona.
+ 
+ El nombre de este blog es **C³** pues son las iniciales en inglés del área en la que me especialicé y mi nombre: _Computational Chemistry Camilo_, _C C C_, C³.
 ---
 
 ```{r setup, include=FALSE}
