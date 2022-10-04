@@ -30,15 +30,23 @@ knitr::include_graphics("pictures/code.png")
 
 Los siguientes dos scripts en Bash requieren de otros archivos en los que les proporcionaremos las ventanas de simulación, los frames que corresponden a dichas ventanas de simulación, los archivos 'input' plantilla para enviar los cálculos a CHARMM, y finalmente, los archivos 'input' que generarán otros archivos necesarios para las dinámicas QM/MM.
 
-Por lo tanto, los archivos que deben estar en la misma carpeta para lograr generar satisfactoriamente las carpetas con los archivos de entrada correspondientes a cada una de las ventanas negativas y positivas son los siguientes:
+Por lo tanto, los archivos que deben estar en la misma dirección para lograr generar satisfactoriamente las carpetas con los archivos de entrada correspondientes a cada una de las ventanas negativas y positivas son los siguientes:
+
+_Los scripts_
+
+- 01-create_conf-cfm.sh;
+- 02-create_us_eq-cfm.sh;
+
+_Y los archivos extras_
 
 - negative_rc.txt;
 - positive_rc.txt;
+- traj_frames_neg.txt;
+- traj_frames_pos.txt
 - conf_template.inp;
 - makenew_cns.inp;
 - makenew_reg.inp;
-traj_frames_*.txt,           ###
-###                , ,             ###
+
 
 
 
