@@ -2,7 +2,7 @@
   {
     "path": "posts/us_scripts/",
     "title": "Scripts en Bash para realizar cálculos Umbrella Sampling (QM/MM MD)",
-    "description": "En éste post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando.",
+    "description": "En este post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando.",
     "author": [
       {
         "name": "Camilo Febres-Molina",
@@ -13,8 +13,8 @@
     "categories": [],
     "contents": "\n\n\n\nIndicaciones iniciales\nLos siguientes dos scripts en Bash requieren de algunos\n\n\n\n",
     "preview": "posts/us_scripts/pictures/code.png",
-    "last_modified": "2022-10-03T17:38:32-05:00",
-    "input_file": {}
+    "last_modified": "2022-10-03T21:00:30-05:00",
+    "input_file": "us_scripts.knit.md"
   },
   {
     "path": "posts/tutorial_bfee/",
