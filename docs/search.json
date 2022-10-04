@@ -3,17 +3,17 @@
     {
       "path": "about.html",
       "title": "Acerca de este blog",
-      "description": "Este blog tiene por objetivo inicial compartir el conocimiento científico generado en un ambiente virtual que facilite su distribución y a su vez sirva como repositorio de esta información. Luego, mi propósito es el de generar contenido relativo a mi especialidad que sea asequible para todo público. Eventualmente, crear contenido en redes sociales que se base en este mismo propósito, y así, poder difundir el área de conocimiento que tanto me apasiona.",
+      "description": "Este blog tiene por objetivo inicial compartir el conocimiento científico generado por mí en un ambiente virtual que facilite su distribución y a su vez sirva como repositorio de esta información.\n\nLuego, mi propósito es el de generar contenido relativo a mi especialidad que sea asequible para todo público. Eventualmente, crear contenido en redes sociales que se base en este mismo propósito, y así, poder difundir el área de conocimiento que tanto me apasiona.",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-10-03T12:09:20-05:00"
+      "last_modified": "2022-10-03T20:48:35-05:00"
     },
     {
       "path": "index.html",
       "title": "El Blog de Química Computacional de Camilo:     C³",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-10-03T12:47:01-05:00"
+      "last_modified": "2022-10-03T17:38:32-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
