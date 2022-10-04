@@ -1,7 +1,7 @@
 ---
 title: "Scripts en Bash para realizar cálculos Umbrella Sampling (QM/MM MD)"
 description: |
-  En este post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando.
+  En este post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando y utilizando la interfaz CHARMM-Gaussian.
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
@@ -28,8 +28,9 @@ knitr::include_graphics("pictures/code.png")
 
 # Indicaciones iniciales
 
-Los siguientes dos scripts en Bash requieren de algunos 
+Los siguientes dos scripts en Bash requieren de dos archivos en los que les proporcionaremos tanto las ventanas de simulación, como también los frames que corresponden a dichas ventanas de simulación.
 
+Por lo tanto, los archivos que deben estar en la misma carpeta para lograr generar satisfactoriamente 
 
 
 
