@@ -118,7 +118,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pictures/code.png","pictures/neg_win.png","pictures/traj_neg.png","scripts_files/0_old.inp","scripts_files/01-create_conf-cfm.sh","scripts_files/02-create_us_eq-cfm.sh","scripts_files/1.sh","scripts_files/2.sh","scripts_files/conf_template.inp","scripts_files/extract.inp","scripts_files/makenew_cns.inp","scripts_files/makenew_reg.inp","scripts_files/negative_rc.txt","scripts_files/positive_rc.txt","scripts_files/prueba.sh","scripts_files/traj_frames_neg.txt","scripts_files/traj_frames_pos.txt","scripts_files/us_eq_template.inp","us_scripts_files/anchor-4.2.2/anchor.min.js","us_scripts_files/bowser-1.9.3/bowser.min.js","us_scripts_files/distill-2.2.21/template.v2.js","us_scripts_files/header-attrs-2.16/header-attrs.js","us_scripts_files/jquery-3.6.0/jquery-3.6.0.js","us_scripts_files/jquery-3.6.0/jquery-3.6.0.min.js","us_scripts_files/jquery-3.6.0/jquery-3.6.0.min.map","us_scripts_files/popper-2.6.0/popper.min.js","us_scripts_files/tippy-6.2.7/tippy-bundle.umd.min.js","us_scripts_files/tippy-6.2.7/tippy-light-border.css","us_scripts_files/tippy-6.2.7/tippy.css","us_scripts_files/tippy-6.2.7/tippy.umd.min.js","us_scripts_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["pictures/code.png","pictures/neg_win.png","pictures/result.png","pictures/traj_neg.png","scripts_files/0_old.inp","scripts_files/01-create_conf-cfm.sh","scripts_files/02-create_us_eq-cfm.sh","scripts_files/1.sh","scripts_files/2.sh","scripts_files/conf_template.inp","scripts_files/extract.inp","scripts_files/makenew_cns.inp","scripts_files/makenew_reg.inp","scripts_files/negative_rc.txt","scripts_files/positive_rc.txt","scripts_files/prueba.sh","scripts_files/traj_frames_neg.txt","scripts_files/traj_frames_pos.txt","scripts_files/us_eq_template.inp","us_scripts_files/anchor-4.2.2/anchor.min.js","us_scripts_files/bowser-1.9.3/bowser.min.js","us_scripts_files/distill-2.2.21/template.v2.js","us_scripts_files/header-attrs-2.16/header-attrs.js","us_scripts_files/jquery-3.6.0/jquery-3.6.0.js","us_scripts_files/jquery-3.6.0/jquery-3.6.0.min.js","us_scripts_files/jquery-3.6.0/jquery-3.6.0.min.map","us_scripts_files/popper-2.6.0/popper.min.js","us_scripts_files/tippy-6.2.7/tippy-bundle.umd.min.js","us_scripts_files/tippy-6.2.7/tippy-light-border.css","us_scripts_files/tippy-6.2.7/tippy.css","us_scripts_files/tippy-6.2.7/tippy.umd.min.js","us_scripts_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -2161,6 +2161,23 @@ write coor card comp unit 13
 *
 
 return</code></pre>
+<p>Finalmente, cabe destacar dos cosas:</p>
+<ul>
+<li><p>Se debe recordar direccionar correctamente los archivos de
+coordenadas (.crd), de topología (.psf), trayectoria (.dcd) y los
+parámetros en el archivo <em>conf_template.inp</em></p></li>
+<li><p>Para ejecutar los scripts en bash, primero se les debe dar
+permiso de ejecución, por ejemplo, así: <em>chmod +x
+01-create_conf-cfm.sh</em> y luego correrlos de la siguiente manera:
+<em>./01-create_conf-cfm.sh</em></p></li>
+</ul>
+<p>Todo lo anterior generará las carpetas y los archivos necesarios para
+poder realizar Umbrella Sampling (QM/MM MD) utilizando la interfaz
+CHARMM-Gaussian.</p>
+<p>Como ejemplo, el resultado sería algo así:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pictures/result.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

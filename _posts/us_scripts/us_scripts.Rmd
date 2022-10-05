@@ -675,3 +675,17 @@ write coor card comp unit 13
 
 return
 ```
+
+Finalmente, cabe destacar dos cosas:
+
+- Se debe recordar direccionar correctamente los archivos de coordenadas (.crd), de topología (.psf), trayectoria (.dcd) y los parámetros en el archivo _conf_template.inp_
+
+- Para ejecutar los scripts en bash, primero se les debe dar permiso de ejecución, por ejemplo, así: _chmod +x 01-create_conf-cfm.sh_ y luego correrlos de la siguiente manera: _./01-create_conf-cfm.sh_
+
+Todo lo anterior generará las carpetas y los archivos necesarios para poder realizar Umbrella Sampling  (QM/MM MD) utilizando la interfaz CHARMM-Gaussian.
+
+Como ejemplo, el resultado sería algo así:
+
+```{r,out.width="50%",fig.align='center'}
+knitr::include_graphics("pictures/result.png")
+```
