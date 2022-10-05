@@ -1,7 +1,7 @@
 ---
 title: "Scripts en Bash para realizar cálculos Umbrella Sampling (QM/MM MD)"
 description: |
-  En este post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando y utilizando la interfaz CHARMM-Gaussian.
+  En este post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando y utilizando la interfaz CHARMM-Gaussian, dado que el nivel de teoría a utilizar será SCC-DFTB/CHARMM.
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
@@ -32,14 +32,10 @@ Los siguientes dos scripts en Bash requieren de otros archivos en los que les pr
 
 Por lo tanto, los archivos que deben estar en la misma dirección para lograr generar satisfactoriamente las carpetas con los archivos de entrada correspondientes a cada una de las ventanas negativas y positivas son los siguientes:
 
-_Los scripts_
-
-- 01-create_conf-cfm.sh;
+- 01-create_conf-cfm.sh;  &nbsp; &nbsp; &nbsp; <-- _Los scripts_
 - 02-create_us_eq-cfm.sh;
 
-_Y los archivos extras_
-
-- negative_rc.txt;
+- negative_rc.txt;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <-- _Y los archivos extras_
 - positive_rc.txt;
 - traj_frames_neg.txt;
 - traj_frames_pos.txt

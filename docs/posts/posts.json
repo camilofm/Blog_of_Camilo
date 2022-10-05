@@ -2,7 +2,7 @@
   {
     "path": "posts/us_scripts/",
     "title": "Scripts en Bash para realizar cálculos Umbrella Sampling (QM/MM MD)",
-    "description": "En este post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando y utilizando la interfaz CHARMM-Gaussian.",
+    "description": "En este post presento dos scripts que sirven para generar los archivos de entrada para poder correr cálculos de Umbrella Sampling en sistemas proteína-ligando y utilizando la interfaz CHARMM-Gaussian, dado que el nivel de teoría a utilizar será SCC-DFTB/CHARMM.",
     "author": [
       {
         "name": "Camilo Febres-Molina",
@@ -11,9 +11,9 @@
     ],
     "date": "2022-09-20",
     "categories": [],
-    "contents": "\n\n\n\nIndicaciones iniciales\nLos siguientes dos scripts en Bash requieren de otros archivos en los\nque les proporcionaremos las ventanas de simulación, los frames que\ncorresponden a dichas ventanas de simulación, los archivos ‘input’\nplantilla para enviar los cálculos a CHARMM, y finalmente, los archivos\n‘input’ que generarán otros archivos necesarios para las dinámicas\nQM/MM.\nPor lo tanto, los archivos que deben estar en la misma dirección para\nlograr generar satisfactoriamente las carpetas con los archivos de\nentrada correspondientes a cada una de las ventanas negativas y\npositivas son los siguientes:\nLos scripts\n01-create_conf-cfm.sh;\n02-create_us_eq-cfm.sh;\nY los archivos extras\nnegative_rc.txt;\npositive_rc.txt;\ntraj_frames_neg.txt;\ntraj_frames_pos.txt\nconf_template.inp;\nmakenew_cns.inp;\nmakenew_reg.inp;\n\n\n\n",
+    "contents": "\n\n\n\nIndicaciones iniciales\nLos siguientes dos scripts en Bash requieren de otros archivos en los\nque les proporcionaremos las ventanas de simulación, los frames que\ncorresponden a dichas ventanas de simulación, los archivos ‘input’\nplantilla para enviar los cálculos a CHARMM, y finalmente, los archivos\n‘input’ que generarán otros archivos necesarios para las dinámicas\nQM/MM.\nPor lo tanto, los archivos que deben estar en la misma dirección para\nlograr generar satisfactoriamente las carpetas con los archivos de\nentrada correspondientes a cada una de las ventanas negativas y\npositivas son los siguientes:\n01-create_conf-cfm.sh;       <– Los scripts\n02-create_us_eq-cfm.sh;\nnegative_rc.txt;                     <– Y los archivos\nextras\npositive_rc.txt;\ntraj_frames_neg.txt;\ntraj_frames_pos.txt\nconf_template.inp;\nmakenew_cns.inp;\nmakenew_reg.inp;\n\n\n\n",
     "preview": "posts/us_scripts/pictures/code.png",
-    "last_modified": "2022-10-04T18:38:56-05:00",
+    "last_modified": "2022-10-04T19:05:36-05:00",
     "input_file": "us_scripts.knit.md"
   },
   {
