@@ -1,0 +1,57 @@
+* center at Cu
+*
+! atoms beyond ? will be held fixed, so only need to add constraints to
+! buffer region atoms within that cutoff
+!set 1 20.0    ! radius for fully mobile region
+!set 2 24.0    ! radius of inner region
+!set 3 22.0    ! radius of buffer region where Langevin dynamics will be used
+!set 1 @rdroff    ! radius for fully mobile region
+!set 2 @rsphere   ! radius of inner region
+!set 3 @rwater    ! radius of buffer region where Langevin dynamics will be used
+
+!all comments were written in a 24/22/20 partition. but the input is general
+
+scalar xcomp set 0.0
+scalar ycomp set 0.0
+scalar zcomp set 0.0
+scalar wcomp set 0.0
+
+! INNER, MOBILE REGION
+! residues with at least one atom within 20-A and
+!   with no main chain atoms outside of 22-A
+scalar xcomp set 1.0 -
+         sele  ( .byres. ( point @xcen @ycen @zcen cut @rdroff ) ) -
+        .and. .not. (( type C  .or. type O  .or. type N .or. -
+                      type CA .or. type HA .or. type HN) -
+        .and. .not. ( point @xcen @ycen @zcen cut @rwater )) end
+scalar xcomp store 1
+
+! INITIAL BUFFER REGION
+! residues with at least one atom within 24-A,  but not already
+!  included in the inner, mobile region
+scalar ycomp set 1.0 sele ( .byres. ( point @xcen @ycen @zcen cut @rsphere ) ) -
+        .and. .not. recall 1 end
+scalar ycomp store 2
+
+! PROTEIN LANGEVIN ATOMS
+! all atoms, except hydrogens and waters in the buffer region
+scalar zcomp set 1.0 sele recall 2 .and. .not. -
+        ( hydrogen .or. lone .or. resname tip3 ) end
+scalar zcomp store 3
+
+! OUTER REGION ATOMS
+! any atom not in the inner or buffer regions
+scalar wcomp set 1.0 sele .not. (recall 1 .or. recall 2 ) end
+scalar wcomp store 4
+!write out the new psf and crd, as well as partition.
+
+open unit 13 write form name @d/@output.reg
+write coor card comp unit 13
+* column 1: reaction region 16 A by residue partioning
+* column 2: Buffer region atoms, any atoms (byres) within @rsphere A but
+*           not in @rdroff A plus all main chain atoms outside @rwater A
+* column 3: Protein Langevin atoms (same as col. 2 but no H or tip3).
+* column 4: Outer region atoms
+*
+
+return

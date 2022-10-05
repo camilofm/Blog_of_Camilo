@@ -1,0 +1,170 @@
+! Equilibrium MD for umbrella sampling - GTF-SI_wt
+
+bomlev -2
+
+!----files
+set input RRR
+set output RRR
+set loadcrd  0 !load @restart.crd before any min or md
+set loadres  0 !load @restart.res before any min or md
+set loadpdb  0 !load @restart.res before any min or md
+!set mijinp   1v54.fsph30.mij.25.mij
+!set phiinp   1v54.fsph30.phi
+!----directories
+set d .
+set stream ~/utils/stream
+
+!-----keywords
+set kumb 100.0
+set del0 TTT
+!-----------elec options
+set nbond ext
+!set nbond atcut
+!set polgsbp 25
+!-----------min op
+set minon  0
+set minrun abnr
+set minstep 50
+set minprint 1
+set mintolg 0.01
+!-----------md op
+set mdon  1
+set mdrun  start
+!set mdseed 314159
+set mdtype lang
+set timest 0.001
+set mdstep 10000
+set mdfirst 100
+set mdtemp 310
+set ieqfrq 500.0 !higher than 0.0 for equilibration
+!
+!-----------regions (consistens with regions/constants file)
+set xcen     0.0
+set ycen     0.0
+set zcen     0.0
+set rsphere 25.0         ! radius of the spherical region of interest
+set rexcl    2.0         ! water exclusion radius 
+set rgeo     4.0         ! to setup the MMFP potential + Langevin(buffer) zone
+calc rwater  = @rsphere - @rexcl
+calc rdroff  = @rsphere - @rgeo
+
+stream toppar_wo.str
+
+stream @stream/input.inp
+
+stream @stream/nbond_atcut.inp
+!set langevin environment
+stream @stream/sbc.inp
+!what is fixed and what moves (consistent with sbc)
+! apply regdef and mmfp altogether
+stream @stream/regdef.inp !fix(3-bonds rule) and scale 0.0 charges
+!cons fix sele resname CU2 end ! CUa is very close to the edge we dont have parameter
+stream @stream/mmfp_sph.inp
+
+define asp sele segid PROA .and. resid 477 .and.( .not. (type CA .or. type HA -
+ .or. type N .or. type HN .or. type C .or. type O )) end
+
+define glup sele segid PROA .and. resid 515 .and.( .not. (type CA .or. type HA - 
+ .or. type N .or. type HN .or. type C .or. type O )) end
+
+define asp2 sele segid PROA .and. resid 588 .and.( .not. (type CA .or. type HA -
+ .or. type N .or. type HN .or. type C .or. type O )) end
+
+define wo67 sele segid HETB .and. resid 1167 end
+
+define wo96 sele segid HETB .and. resid 1196 end
+
+define qm sele asp .or. glup .or. segid HETA .or. asp2 .or. wo67 .or. wo96 end
+
+scalar WMAIN set 1.0 sele (qm) .and. type O*  SHOW end
+scalar WMAIN set 2.0 sele (qm) .and. type N*  SHOW end
+scalar WMAIN set 3.0 sele (qm) .and. type C*  SHOW end
+scalar WMAIN set 4.0 sele (qm) .and. type H*  SHOW end
+scalar WMAIN set 4.0 sele (qm) .and. type QQ*  SHOW end
+
+SCCDFTB remove CHRG -2 SELE QM END TEMP 0.00 SCFT 0.00000001  D3RD HBOND
+
+!------Load current geom--
+if loadcrd lt 1 goto noloadcrd
+open read unit 3 card name @d/@restart.crd
+read coor card unit 3
+close unit 3
+
+label noloadcrd
+!------Load current geom--
+if loadres lt 1 goto noloadres
+open read unit 3 card name @d/@restart.res
+read coor dynr curr unit 3
+close unit 3
+
+label noloadres
+!------Load current geom--
+if loadpdb lt 1 goto noloadpdb
+open read unit 3 card name @d/@restart.pdb
+read coor pdb unit 3
+close unit 3
+
+label noloadpdb
+
+
+open write unit 3 card name @output.qm.pdb
+write coor pdb sele qm end unit 3
+close unit 3
+
+rxncor: define o1   point sele atom HETA 1 O1 end
+rxncor: define c1   point sele atom HETA 1 C1 end
+rxncor: define oasp point sele atom PROA 477 OD1 end
+rxncor: define a3   dist o1 c1
+rxncor: define a4   dist c1 oasp
+
+rxncor: define RC combin a3 1.0 a4 -1.0
+rxncor: set nrxn 1 RC
+
+open unit 29 form write name  @d/@output.rc
+
+rxncor: trace RC unit 29
+
+rxncor: umbrella name RC kumb @kumb del0 @del0 form 1 
+rxncor: statistics name RC lowdelta -1.7 hidelta 1.5 deldel 0.1 start 1000
+!energy
+!-------MIN -------------
+if minon lt 1 goto nomin
+!open write unit 11 uform name @output.min.dcd
+!mini @minrun nstep @minstep nprint @minprint tolg @mintolg iuncrd 11 nsavc 3
+mini @minrun nstep @minstep nprint @minprint tolg @mintolg
+
+label nomin
+
+
+if mdon lt 1 goto nomd
+!shake bonh tolerance 1.0e-06 MXIT 1500
+
+open unit 24 form read  name @d/@restart.res
+open unit 25 form write name @d/@output.res
+open unit 26 file write name @d/@output.dcd
+open unit 21 form write name @d/@output.static 
+
+dynamics @mdtype @mdrun timestep @timest nstep @mdstep nprint 10 iprfrq 500 -
+    firstt @mdfirst finalt @mdtemp tstruc @mdtemp TEMINC 5.0 twindl -10.0 twindh 10.0 -
+    IHTFRQ 0 IEQFRQ @ieqfrq NTRFRQ 0 ISVFRQ 100 -
+    IASORS 0 IASVEL 1 ISCVEL 0 ICHECW 0 ISEED iseed -
+    iunrea 24 iunwri 25 iuncrd 26 iunvel -1 kunit 20 nsavc 100 nsavv 0 -
+    inbfrq -1 imgfrq 0 ilbfrq -1 ihbfrq 0 tbath @mdtemp rbuffer @rdroff
+
+rxncor: write unit 21
+close unit 21
+close unit 25
+close unit 26
+
+label nomd
+
+
+open write unit 3 card name qm.@output.pdb
+write coor pdb sele qm end unit 3
+close unit 3
+
+stream @stream/write.inp
+
+stop
+
+
