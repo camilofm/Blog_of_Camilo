@@ -686,6 +686,6 @@ Todo lo anterior generará las carpetas y los archivos necesarios para poder rea
 
 Como ejemplo, el resultado sería algo así:
 
-```{r,out.width="50%",fig.align='center'}
+```{r,out.width="70%",fig.align='center'}
 knitr::include_graphics("pictures/result.png")
 ```
