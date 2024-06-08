@@ -66,4 +66,3 @@ AIM se integra en muchos paquetes de software de química computacional, permiti
 ## Impacto de AIM
 
 AIM ha tenido un impacto profundo en la química teórica y computacional. Su enfoque riguroso y matemático ha proporcionado una base sólida para estudios de estructura electrónica, reactividad química y diseño de materiales.
-
