@@ -1,7 +1,7 @@
 ---
 title: "La Teoría de Átomos en Moléculas (AIM - en Inglés)"
 description: |
-  ...
+  La Teoría de Átomos en Moléculas (AIM) es una metodología desarrollada por Richard F. W. Bader en las décadas de 1970 y 1980. AIM proporciona una manera rigurosa y matemática de definir átomos dentro de una molécula a través del análisis topológico de la densidad electrónica. Al identificar puntos críticos y superficies de cero flujo en la densidad electrónica, AIM permite delinear regiones atómicas y estudiar las interacciones entre ellas. Esta teoría ha tenido un impacto significativo en la química teórica y computacional, facilitando la comprensión de la estructura electrónica, la reactividad química y el diseño de materiales.
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
