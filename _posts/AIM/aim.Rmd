@@ -1,7 +1,7 @@
 ---
-title: "prueba"
+title: "La Teoría de Átomos en Moléculas (AIM - en Inglés)"
 description: |
-  sfgsdfgsdfgD.
+  ...
 author:
   - name: Camilo Febres-Molina 
     url: https://github.com/camilofm
@@ -24,9 +24,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+<!--
 ```{r,out.width="80%",fig.align='center'}
 knitr::include_graphics("pictures/gromacs.png")
 ```
+-->
 
 # La Teoría de Átomos en Moléculas (AIM - en Inglés)
 
