@@ -7,7 +7,7 @@ author:
     url: https://github.com/camilofm
     affiliation: UNAB - Chile
     affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
-date: 08-25-2022
+date: 07-06-2024
 bibliography: tutorial_gromacs.bib
 output:
   distill::distill_article:
