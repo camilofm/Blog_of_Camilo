@@ -1,0 +1,98 @@
+---
+title: "prueba"
+description: |
+  sfgsdfgsdfgD.
+author:
+  - name: Camilo Febres-Molina 
+    url: https://github.com/camilofm
+    affiliation: UNAB - Chile
+    affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
+date: 08-25-2022
+bibliography: tutorial_gromacs.bib
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+```{r,out.width="80%",fig.align='center'}
+knitr::include_graphics("pictures/gromacs.png")
+```
+
+# La Teoría de Átomos en Moléculas (AIM - en Inglés)
+
+## Contexto Histórico
+
+### Orígenes y Desarrollo
+
+La teoría de 'Átomos en Moléculas' (AIM) fue desarrollada por Richard F. W. Bader, un químico cuántico canadiense, durante las décadas de 1970 y 1980. Bader estudió en McMaster University, donde completó su licenciatura y maestría, antes de obtener su doctorado en el MIT en 1958. Su carrera académica incluyó puestos en la University of Ottawa y McMaster University, donde desarrolló su revolucionaria teoría.
+
+### Desarrollo de AIM
+
+Bader buscaba definir rigurosamente los átomos dentro de una molécula. La teoría AIM surgió de su observación de que la densidad electrónica (ρ(r)) podía delimitar regiones atómicas dentro de una molécula mediante el análisis topológico.
+
+## La Historia de la Teoría AIM
+
+### Los Primeros Años: Definiendo el Átomo
+
+En los años 70, Bader y su equipo exploraron cómo la densidad electrónica podría definir regiones atómicas dentro de una molécula. Se dieron cuenta de que la topología de la densidad electrónica ofrecía una forma natural de dividir una molécula en átomos.
+
+#### Conceptos Clave:
+
+- **Densidad Electrónica (ρ(r))**: La densidad electrónica en un punto r describe la probabilidad de encontrar un electrón en esa posición.
+- **Gradiente de Densidad Electrónica (∇ρ(r))**: El gradiente de la densidad electrónica indica la dirección de mayor cambio en la densidad.
+
+### Principios AIM
+
+1. **Puntos Críticos**:
+   - **Núcleo (3,-3)**: Máximos locales de densidad, corresponden a los núcleos de los átomos.
+   - **Enlace (3,-1)**: Puntos de silla que indican la existencia de enlaces químicos.
+   - **Plano (3,+1) y Jaula (3,+3)**: Mínimos locales de densidad.
+
+2. **Superficies de Interacción Atómica**:
+   - Los átomos en una molécula se delimitan mediante superficies de cero flujo del gradiente de densidad electrónica.
+
+### Publicación y Reconocimiento
+
+En 1981, Bader publicó su teoría en el libro "Atoms in Molecules: A Quantum Theory". Aunque inicialmente encontró resistencia, su teoría eventualmente ganó aceptación y se convirtió en una herramienta fundamental en la química teórica y computacional.
+
+## Aplicaciones de AIM
+
+### Optimización de Geometrías
+
+AIM permite definir átomos y estudiar sus interacciones dentro de una molécula, mejorando la comprensión de la optimización de geometrías moleculares y la naturaleza de los enlaces químicos.
+
+### Análisis de Enlaces
+
+Los puntos críticos de enlace (BCP) son esenciales para caracterizar y entender enlaces covalentes, iónicos y no covalentes. La densidad electrónica en estos puntos y su curvatura proporcionan información sobre la fuerza y naturaleza del enlace.
+
+### Dinámica Molecular y Simulaciones
+
+AIM se integra en muchos paquetes de software de química computacional, permitiendo realizar análisis topológicos de densidad electrónica en simulaciones de dinámica molecular.
+
+## Ejemplo Ilustrativo: El Agua (H₂O)
+
+1. **Cálculo de Densidad Electrónica**:
+   Utilizamos un método como la DFT para calcular la densidad electrónica de H₂O.
+
+2. **Identificación de Puntos Críticos**:
+   Encontramos puntos críticos en los núcleos de oxígeno e hidrógeno (3,-3) y puntos críticos de enlace (3,-1) entre el oxígeno y cada hidrógeno.
+
+3. **Análisis de Enlaces**:
+   La densidad en los puntos críticos de enlace nos dice sobre la naturaleza covalente del enlace O-H.
+
+4. **Definición de Átomos**:
+   Las superficies de cero flujo delimitan el oxígeno y los hidrógenos, permitiendo calcular propiedades como la carga atómica integrando sobre estas regiones.
+
+## Impacto de AIM
+
+AIM ha tenido un impacto profundo en la química teórica y computacional. Su enfoque riguroso y matemático ha proporcionado una base sólida para estudios de estructura electrónica, reactividad química y diseño de materiales.
