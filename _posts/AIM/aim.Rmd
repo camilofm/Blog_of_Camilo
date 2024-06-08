@@ -9,7 +9,7 @@ author:
     affiliation: UNAB - Chile
     affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
 date: 07-06-2024
-bibliography: tutorial_gromacs.bib
+bibliography: aim.bib
 output:
   distill::distill_article:
     self_contained: false
@@ -81,7 +81,7 @@ Esta ecuación se utiliza para identificar puntos críticos en la densidad elect
 
 ### Publicación y Reconocimiento
 
-En 1981, Bader publicó su teoría en el libro "Atoms in Molecules: A Quantum Theory". Aunque inicialmente encontró resistencia, su teoría eventualmente ganó aceptación y se convirtió en una herramienta fundamental en la química teórica y computacional.
+En 1981, Bader publicó su teoría en el libro "Atoms in Molecules: A Quantum Theory" [@bader1981quantum]. Aunque inicialmente encontró resistencia, su teoría eventualmente ganó aceptación y se convirtió en una herramienta fundamental en la química teórica y computacional.
 
 ## Aplicaciones de AIM
 
@@ -120,6 +120,9 @@ AIM se integra en muchos paquetes de software de química computacional, permiti
 \[
 \left. \frac{\partial \rho}{\partial x_i} \right|_{\text{BCP}} = 0 \quad \forall i
 \]
+
+   Esta ecuación indica que el gradiente de densidad electrónica en el punto crítico de enlace (BCP) es cero en todas las direcciones, lo que define claramente la región del enlace y permite analizar sus propiedades.
+
 
 ## Impacto de AIM
 
