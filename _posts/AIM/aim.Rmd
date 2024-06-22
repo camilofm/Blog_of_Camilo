@@ -69,10 +69,6 @@ El gradiente de densidad electrónica es fundamental para identificar las superf
 
 ### Principios AIM
 
-Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.
-
-### Principios AIM
-
 Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica y las regiones mononucleares (\(\Omega\)).
 
 1. **Puntos Críticos**:
