@@ -26,14 +26,18 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r,out.width="80%",fig.align='center'}
-knitr::include_graphics("pictures/aim.png")
+knitr::include_graphics("pictures/aim2.png")
 ```
 
-# La Teoría de Átomos en Moléculas (*AIM - en Inglés*)
+# La Teoría de Átomos en Moléculas (*Atoms In Molecules, AIM - en Inglés*)
 
 ### Orígenes y Desarrollo
 
 Durante las décadas de 1970 y 1980, Richard F. W. Bader, un destacado químico cuántico canadiense, desarrolló la revolucionaria teoría de 'Átomos en Moléculas' (AIM). Bader, tras completar su licenciatura y maestría en McMaster University, obtuvo su doctorado en el MIT en 1958. Durante su carrera académica en la University of Ottawa y posteriormente en McMaster University, Bader se dedicó a encontrar una forma precisa y rigurosa de definir los átomos dentro de una molécula.
+
+```{r, out.width="30%", fig.align='center', echo=FALSE}
+knitr::include_graphics("pictures/bader.jpg")
+```
 
 ### Desarrollo de AIM
 
@@ -74,7 +78,7 @@ El gradiente de densidad electrónica es fundamental para identificar las superf
    - Los átomos en una molécula se delimitan mediante superficies de cero flujo del gradiente de densidad electrónica. Estas superficies se encuentran resolviendo:
 
 \[
-\nabla \rho(\mathbf{r}) = 0
+\left. \nabla \rho(\mathbf{r}) \right|_{\text{Superficie}} = 0
 \]
 
 Esta ecuación se utiliza para identificar puntos críticos en la densidad electrónica, determinando así los límites de los átomos dentro de una molécula.
@@ -123,7 +127,7 @@ AIM se integra en muchos paquetes de software de química computacional, permiti
 
    Esta ecuación indica que el gradiente de densidad electrónica en el punto crítico de enlace (BCP) es cero en todas las direcciones, lo que define claramente la región del enlace y permite analizar sus propiedades.
 
-
 ## Impacto de AIM
 
 AIM ha tenido un impacto profundo en la química teórica y computacional. Su enfoque riguroso y matemático ha proporcionado una base sólida para estudios de estructura electrónica, reactividad química y diseño de materiales.
+
