@@ -73,11 +73,7 @@ Basándose en la topología de la densidad electrónica, la teoría AIM proporci
 
 ### Principios AIM
 
-Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.
-
-### Principios AIM
-
-Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.
+Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica y las regiones mononucleares (\(\Omega\)).
 
 1. **Puntos Críticos**:
    - Los puntos críticos son lugares en el espacio donde el gradiente de la densidad electrónica es cero, es decir, donde no hay cambio en la densidad en ninguna dirección. Esto significa que en estos puntos, la densidad electrónica es extrema (máxima o mínima) o tiene un comportamiento de silla de montar.
@@ -90,13 +86,14 @@ Basándose en la topología de la densidad electrónica, la teoría AIM proporci
    - **Plano (3,+1)** y **Jaula (3,+3)**: Mínimos locales de densidad que se relacionan con estructuras tridimensionales más complejas dentro de la molécula.
 
 2. **Superficies de Interacción Atómica**:
-   - Los átomos en una molécula se delimitan mediante superficies de cero flujo del gradiente de densidad electrónica. Estas superficies se encuentran resolviendo:
+   - Los átomos en una molécula están delimitados por superficies de flujo cero (\(S(\Omega)\)) en el campo vectorial del gradiente de la densidad electrónica, \(\nabla \rho(\mathbf{r})\). Estas superficies no son cruzadas por ningún vector de gradiente de la densidad electrónica, lo que equivale a satisfacer la condición:
 
 \[
-\left. \nabla \rho(\mathbf{r}) \right|_{\text{Superficie}} = 0
+\nabla \rho(\mathbf{r}) \cdot \mathbf{n}(\mathbf{r}) = 0, \quad \text{para toda } \mathbf{r} \in S(\Omega)
 \]
 
-Esta ecuación se utiliza para identificar puntos críticos en la densidad electrónica, determinando así los límites de los átomos dentro de una molécula.
+   donde \(\mathbf{r}\) es el vector de posición y \(\mathbf{n}(\mathbf{r})\) es el vector unitario normal a la superficie \(S(\Omega)\). Esta condición define claramente los límites de los átomos dentro de una molécula.
+
 
 ### Publicación y Reconocimiento
 

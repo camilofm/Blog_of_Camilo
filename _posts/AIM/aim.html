@@ -1605,9 +1605,7 @@ text-align: justify}
 <h3 id="principios-aim">Principios AIM</h3>
 <p>Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.</p>
 <h3 id="principios-aim-1">Principios AIM</h3>
-<p>Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.</p>
-<h3 id="principios-aim-2">Principios AIM</h3>
-<p>Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.</p>
+<p>Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica y las regiones mononucleares (<span class="math inline">\(\Omega\)</span>).</p>
 <ol type="1">
 <li><strong>Puntos Críticos</strong>:
 <ul>
@@ -1623,13 +1621,13 @@ text-align: justify}
 </ul></li>
 <li><strong>Superficies de Interacción Atómica</strong>:
 <ul>
-<li>Los átomos en una molécula se delimitan mediante superficies de cero flujo del gradiente de densidad electrónica. Estas superficies se encuentran resolviendo:</li>
+<li>Los átomos en una molécula están delimitados por superficies de flujo cero (<span class="math inline">\(S(\Omega)\)</span>) en el campo vectorial del gradiente de la densidad electrónica, <span class="math inline">\(\nabla \rho(\mathbf{r})\)</span>. Estas superficies no son cruzadas por ningún vector de gradiente de la densidad electrónica, lo que equivale a satisfacer la condición:</li>
 </ul></li>
 </ol>
 <p><span class="math display">\[
-\left. \nabla \rho(\mathbf{r}) \right|_{\text{Superficie}} = 0
+\nabla \rho(\mathbf{r}) \cdot \mathbf{n}(\mathbf{r}) = 0, \quad \text{para toda } \mathbf{r} \in S(\Omega)
 \]</span></p>
-<p>Esta ecuación se utiliza para identificar puntos críticos en la densidad electrónica, determinando así los límites de los átomos dentro de una molécula.</p>
+<p>donde <span class="math inline">\(\mathbf{r}\)</span> es el vector de posición y <span class="math inline">\(\mathbf{n}(\mathbf{r})\)</span> es el vector unitario normal a la superficie <span class="math inline">\(S(\Omega)\)</span>. Esta condición define claramente los límites de los átomos dentro de una molécula.</p>
 <h3 id="publicación-y-reconocimiento">Publicación y Reconocimiento</h3>
 <p>En 1981, Bader publicó su teoría en el libro “Atoms in Molecules: A Quantum Theory” <span class="citation" data-cites="bader1981quantum">(<a href="#ref-bader1981quantum" role="doc-biblioref">Bader and Nguyen-Dang 1981</a>)</span>. Aunque inicialmente encontró resistencia, su teoría eventualmente ganó aceptación y se convirtió en una herramienta fundamental en la química teórica y computacional.</p>
 <h2 id="aplicaciones-de-aim">Aplicaciones de AIM</h2>
