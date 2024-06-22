@@ -69,10 +69,25 @@ El gradiente de densidad electrónica es fundamental para identificar las superf
 
 ### Principios AIM
 
+Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.
+
+### Principios AIM
+
+Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.
+
+### Principios AIM
+
+Basándose en la topología de la densidad electrónica, la teoría AIM proporciona una manera precisa de identificar y definir los átomos y sus interacciones dentro de una molécula. Esta teoría permite el análisis detallado de la estructura molecular a través de los puntos críticos de la densidad electrónica.
+
 1. **Puntos Críticos**:
-   - **Núcleo (3,-3)**: Máximos locales de densidad, corresponden a los núcleos de los átomos.
-   - **Enlace (3,-1)**: Puntos de silla que indican la existencia de enlaces químicos.
-   - **Plano (3,+1) y Jaula (3,+3)**: Mínimos locales de densidad.
+   - Los puntos críticos son lugares en el espacio donde el gradiente de la densidad electrónica es cero, es decir, donde no hay cambio en la densidad en ninguna dirección. Esto significa que en estos puntos, la densidad electrónica es extrema (máxima o mínima) o tiene un comportamiento de silla de montar.
+   - Estos puntos se clasifican según la curvatura de la densidad electrónica en esas posiciones. Los números entre paréntesis (3,-3), (3,-1), (3,+1), (3,+3) se refieren a la naturaleza del punto crítico:
+     - El primer número (3) indica el número de dimensiones en las cuales se puede describir la densidad electrónica.
+     - El segundo número (-3, -1, +1, +3) describe el tipo de punto crítico, especificando el número de direcciones en las que la densidad electrónica es un máximo (-) o un mínimo (+).
+
+   - **Núcleo (3,-3)**: Máximos locales de densidad que corresponden a los núcleos de los átomos. Indican la posición del núcleo en el espacio.
+   - **Enlace (3,-1)**: Puntos de silla que indican la existencia de enlaces químicos. Estos puntos se encuentran entre núcleos de átomos y son indicativos de la presencia de un enlace.
+   - **Plano (3,+1)** y **Jaula (3,+3)**: Mínimos locales de densidad que se relacionan con estructuras tridimensionales más complejas dentro de la molécula.
 
 2. **Superficies de Interacción Atómica**:
    - Los átomos en una molécula se delimitan mediante superficies de cero flujo del gradiente de densidad electrónica. Estas superficies se encuentran resolviendo:
