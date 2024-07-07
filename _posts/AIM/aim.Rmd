@@ -18,6 +18,9 @@ output:
 <style>
 body {
 text-align: justify}
+.centered-text {
+  text-align: center;
+}
 </style>
 
 ```{r setup, include=FALSE}
@@ -38,6 +41,13 @@ Durante las décadas de 1970 y 1980, Richard F. W. Bader, un destacado químico 
 ```{r, out.width="30%", fig.align='center', echo=FALSE}
 knitr::include_graphics("pictures/bader.jpg")
 ```
+
+```{=html}
+<div class="centered-text">
+Richard F. W. Bader - septiembre 2009
+</div>
+```
+[@cncc2009]
 
 ### Desarrollo de AIM
 
