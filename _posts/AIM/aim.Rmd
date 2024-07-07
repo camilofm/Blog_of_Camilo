@@ -1,7 +1,7 @@
 ---
-title: "La Teoría de Átomos en Moléculas (AIM - en Inglés)"
+title: "La Teoría Cuántica de Átomos en Moléculas (AIM)"
 description: |
-  La Teoría de Átomos en Moléculas (AIM) es una herramienta poderosa creada por Richard F. W. Bader en los años 70 y 80. Esta teoría redefine cómo vemos los átomos en una molécula usando la densidad electrónica. Identificando puntos críticos y superficies de cero flujo, AIM desentraña cómo los átomos interactúan dentro de las moléculas, revolucionando nuestra comprensión de la estructura y reactividad química.  
+  La Teoría Cuántica de Átomos en Moléculas (QTAIM o AIM) es una herramienta poderosa creada por Richard F. W. Bader en los años 70 y 80. Esta teoría redefine cómo vemos los átomos en una molécula usando la densidad electrónica. Identificando puntos críticos y superficies de cero flujo, AIM desentraña cómo los átomos interactúan dentro de las moléculas, revolucionando nuestra comprensión de la estructura y reactividad química.  
   ¡Una joya para la química teórica y computacional!
 author:
   - name: Camilo Febres-Molina 
@@ -32,11 +32,11 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics("pictures/aim.png")
 ```
 
-# La Teoría de Átomos en Moléculas (*Atoms In Molecules, AIM - en Inglés*)
+# La Teoría Cuántica de Átomos en Moléculas (*Quantum Theory of Atoms In Molecules, QTAIM o AIM - en Inglés*)
 
 ### Orígenes y Desarrollo
 
-Durante las décadas de 1970 y 1980, Richard F. W. Bader, un destacado químico cuántico canadiense, desarrolló la revolucionaria teoría de 'Átomos en Moléculas' (AIM). Bader, tras completar su licenciatura y maestría en McMaster University, obtuvo su doctorado en el MIT en 1958. Durante su carrera académica en la University of Ottawa y posteriormente en McMaster University, Bader se dedicó a encontrar una forma precisa y rigurosa de definir los átomos dentro de una molécula.
+Durante las décadas de 1970 y 1980, Richard F. W. Bader, un destacado químico cuántico canadiense, desarrolló la revolucionaria teoría cuántica de "Átomos en Moléculas" (AIM). Bader, tras completar su licenciatura y maestría en McMaster University, obtuvo su doctorado en el MIT en 1958. Durante su carrera académica en la University of Ottawa y posteriormente en McMaster University, Bader se dedicó a encontrar una forma precisa y rigurosa de definir los átomos dentro de una molécula.
 
 ```{r, out.width="30%", fig.align='center', echo=FALSE}
 knitr::include_graphics("pictures/bader.jpg")
