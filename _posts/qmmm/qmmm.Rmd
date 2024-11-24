@@ -52,7 +52,7 @@ Para realizar un cálculo QM/MM, es necesario utilizar un software especializado
 
 Primero, se debe definir qué parte del sistema será tratada con **QM** (generalmente el sitio activo o la región de interés donde ocurre una reacción) y qué parte se tratará con **MM** (el resto del sistema, como la proteína y el solvente). Luego, se configura la simulación con los parámetros adecuados para cada método, y se ejecuta la simulación utilizando la interfaz Qchem-CHARMM para integrar ambas partes del cálculo.
 
-Para ilustrar mejor esta combinación de ambas zonas, a la derecha se muestra la imagen de un sistema proteico y su ligando, resaltando la región **QM** (el sitio activo), mientras que el resto del sistema es tratado con **MM** indicando su contribución al cálculo. Esto ayudará a visualizar cómo se dividen las regiones y cuál es el enfoque general de cada una.
+Para ilustrar mejor esta combinación de ambas zonas, a continuación se muestra la imagen de un sistema proteico y su ligando, resaltando la región **QM** (el sitio activo), mientras que el resto del sistema es tratado con **MM** indicando su contribución al cálculo. Esto ayudará a visualizar cómo se dividen las regiones y cuál es el enfoque general de cada una.
 
 <figure style="float: right; width: 40%; margin: 0 auto;">
   <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
