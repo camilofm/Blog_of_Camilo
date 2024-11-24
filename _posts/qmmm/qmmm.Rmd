@@ -30,9 +30,9 @@ En el campo de la **Química Computacional**, vamos a hablar sobre un tema fasci
   <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/comp-chem.png" alt="Representación ilustrativa de la Química Computacional" style="max-width: 70%; height: auto;">
 </figure>
 
-A lo largo de este post, utilizaremos como ejemplo una proteína con un ligando cualquiera, pero ten en cuenta que también es posible realizar cálculos QM/MM en diversas moléculas para distintas aplicaciones, como materiales orgánicos, complejos metálicos, fármacos, e incluso sistemas catalíticos. Además, mencionaré brevemente el uso de **Teoría del Funcional de la Densidad (DFT)**, una metodología común en los cálculos QM que se utiliza para describir con precisión la densidad electrónica de los sistemas.
+A lo largo de este post, utilizaremos como ejemplo una proteína con un ligando cualquiera, pero ten en cuenta que también es posible realizar cálculos QM/MM en diversas moléculas para distintas aplicaciones, como materiales orgánicos, complejos metálicos, fármacos y muchos tipos de sistemas catalíticos. Además, mencionaré brevemente el uso de **Teoría del Funcional de la Densidad (DFT)**, una metodología común en los cálculos QM que se utiliza para describir con precisión la densidad electrónica de los sistemas.
 
-En este post, te guiaré desde el principio para que puedas comprender los conceptos básicos y cómo funciona esta metodología en general. Además, veremos un ejemplo sencillo para ilustrar el funcionamiento de esta poderosa herramienta, que te será de utilidad incluso si estás empezando en el mundo de la química computacional.
+En este post, te guiaré desde el principio para que puedas comprender los conceptos básicos y cómo funciona esta metodología en general. Además, por medio de un ejemplo ilustraré los pasos fundamentales de esta poderosa herramienta que te será de utilidad incluso si estás empezando en el mundo de la química computacional.
 
 ¡Espero que disfrutes este viaje hacia la comprensión de una de las técnicas más útiles y emocionantes en el estudio de biomoléculas!
 
