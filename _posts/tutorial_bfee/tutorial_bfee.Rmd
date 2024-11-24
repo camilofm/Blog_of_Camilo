@@ -3,7 +3,7 @@ title: "Estimador de Energía Libre de Unión para sistemas proteína-ligando (B
 description: |
   Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el &Delta;Gº de unión por medio del Potencial de Fuerza Medio (PMF).
 author:
-  - name: Camilo Febres-Molina 
+  - name: Dr. Camilo Febres-Molina 
     url: https://github.com/camilofm
     affiliation: Doctorado en Fisicoquímica Molecular - UNAB - Chile
     affiliation_url: https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/
