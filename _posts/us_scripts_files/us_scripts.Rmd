@@ -273,15 +273,9 @@ A continuación se muestran ejemplos arbitrarios de los archivos extra arriba me
 
 - negative_rc.txt:
 
-```{r,out.width="30%",fig.align='center'}
-knitr::include_graphics("pictures/neg_win.png")
-```
 
 - traj_frames_neg.txt:
 
-```{r,out.width="30%",fig.align='center'}
-knitr::include_graphics("pictures/traj_neg.png")
-```
 
 - conf_template.inp:
 
@@ -683,9 +677,3 @@ Finalmente, cabe destacar dos cosas:
 - Para ejecutar los scripts en bash, primero se les debe dar permiso de ejecución, por ejemplo, así: _chmod +x 01-create_conf-cfm.sh_ y luego correrlos de la siguiente manera: _./01-create_conf-cfm.sh_
 
 Todo lo anterior generará las carpetas y los archivos necesarios para poder realizar Umbrella Sampling  (QM/MM MD) utilizando la interfaz CHARMM-Gaussian.
-
-Como ejemplo, el resultado sería algo así:
-
-```{r,out.width="70%",fig.align='center'}
-knitr::include_graphics("pictures/result.png")
-```
