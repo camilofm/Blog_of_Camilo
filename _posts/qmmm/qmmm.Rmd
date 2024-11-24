@@ -14,7 +14,7 @@ output:
 En el campo de la **Química Computacional**, vamos a hablar sobre un tema fascinante: los cálculos QM/MM (Quantum Mechanics/Molecular Mechanics). Esta técnica híbrida combina métodos mecano-cuánticos y mecánica molecular, lo que permite estudiar sistemas grandes de manera eficiente.
 </div>
 
-<figure style="float: right; width: 33%; margin: 0 auto; border-left: 2px solid #ccc; padding-left: 10px;">
+<figure style="float: right; width: 55%; margin: 0 auto;">
   <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/comp-chem.png" alt="Representación ilustrativa de la Química Computacional" style="max-width: 70%; height: auto;">
 </figure>
 
@@ -44,7 +44,7 @@ En el contexto de la química computacional, este enfoque permite reducir los re
 Para realizar un cálculo QM/MM, es necesario utilizar un software especializado que permita combinar ambos enfoques, el cuántico y el molecular. Generalmente, se elige un software que se adapte bien a la naturaleza del sistema y que sea compatible con los métodos híbridos. Para comprender mejor el procedimiento, colocaré un ejemplo de cálculo y metodología para el análisis de una proteína y un ligando utilizando la interfaz **Qchem-CHARMM**, que permite realizar cálculos QM/MM de manera eficiente. Qchem se encarga de la parte cuántica, donde se modelan las reacciones y los procesos que involucran cambios en los enlaces químicos, mientras que CHARMM se encarga de la parte molecular, proporcionando el contexto completo de la proteína o del sistema en su totalidad.
 </div>
 
-<figure style="float: right; width: 22%; margin: 0 auto; border-left: 2px solid #ccc; padding-left: 10px;">
+<figure style="float: right; width: 40%; margin: 0 auto;">
   <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
 </figure>
 
@@ -71,41 +71,47 @@ Debido a la gran diversidad de sistemas, enzimas y reacciones, no existe una 're
    - **Análisis estructural o geométrico**: Se examinan las estructuras optimizadas de los puntos estacionarios (reactante, estado de transición y producto) para identificar cambios importantes en las geometrías a lo largo de la reacción.
 
 <figure style="text-align: center;">
-  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/cpr2.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 60%;">
+  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/cpr2.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 70%;">
   <figcaption style="font-style: italic;">Gráfico que muestra los tres puntos estacionarios de la reacción por la que pasa el camino de mínima energía: el reactivo (R), el estado de transición (TS) y el producto (P). [&sect;]</figcaption>
 </figure>
 
    - **Diagramas de energía**: Se analizan los perfiles de energía para identificar la barrera energética asociada a la reacción y evaluar su viabilidad.
 
 <figure style="text-align: center;">
-  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/scan.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 50%;">
+  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/scan.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 60%;">
   <figcaption style="font-style: italic;">Perfil de energía potencial vs una coordenada de reacción del "scan". Esta es una aproximación inicial que nos permitirá a continuación encontrar el camino de mínima energía. [&sect;]</figcaption>
 </figure>
 
+<div style="margin-top: 1cm;"></div>
+
 <figure style="text-align: center;">
-  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/spe.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 35%;">
+  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/spe.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 50%;">
   <figcaption style="font-style: italic;">Cálculo de energía puntual (single point energy, en inglés) de los puntos estacionarios. Se muestra la barrera o energía de activación (8.8 kcal/mol) de la reacción catalizada por la enzima. [&sect;]</figcaption>
 </figure>
 
    - **Análisis NBO (Natural Bond Orbital)**: Se investigan las cargas de los puntos estacionarios de la reacción para entender la distribución de la carga electrónica y cómo esta influye en la reactividad del sistema.
 
 <figure style="text-align: center;">
-  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/nbo.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 30%;">
-  <figcaption style="font-style: italic;">Estado de transición donde se muestran zonas coloreadas que indican las principales interacciones relacionadas con la reactividad. [&sect;]</figcaption>
+  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/nbo.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 40%;">
+  <figcaption style="font-style: italic;">Estado de transición de la reacción donde se muestran zonas coloreadas que indican las principales interacciones entre los átomos relacionados a la reactividad. [&sect;]</figcaption>
 </figure>
 
-  **Conclusión**: En resumen, el enfoque QM/MM nos permite estudiar sistemas complejos de manera eficiente, combinando la precisión de la mecánica cuántica con la versatilidad y menor costo computacional de la mecánica molecular. A través de los pasos descritos —desde la optimización geométrica hasta el análisis de resultados—, es posible entender en detalle el mecanismo de reacción de biomoléculas y sistemas catalíticos. Los resultados obtenidos, integrando análisis energéticos, NBO y estructurales, nos brindan una visión completa del proceso reactivo, la cual puede ser comparada con otros sistemas similares para validar nuestras conclusiones. Esta poderosa metodología híbrida ha demostrado ser una herramienta esencial para desentrañar los complejos mecanismos de la química biomolecular, proporcionando información clave que puede guiar futuras investigaciones.
+## Conclusión:
 
-Es importante recalcar que esta es solo una de las varias maneras de realizar un cálculo QM/MM, y que los pasos presentados aquí reflejan un ejemplo específico basado en mi experiencia de trabajo.
-</div>
+En resumen, el enfoque QM/MM nos permite estudiar sistemas complejos de manera eficiente, combinando la precisión de la mecánica cuántica con la versatilidad y menor costo computacional de la mecánica molecular. A través de los pasos descritos —desde la optimización geométrica hasta el análisis de resultados—, es posible entender en detalle el mecanismo de reacción de biomoléculas y sistemas catalíticos. Los resultados obtenidos, integrando análisis energéticos, NBO y estructurales, nos brindan una visión completa del proceso reactivo, la cual puede ser comparada con otros sistemas similares para validar nuestras conclusiones. Esta poderosa metodología híbrida ha demostrado ser una herramienta esencial para desentrañar los complejos mecanismos de la química biomolecular, proporcionando información clave que puede guiar futuras investigaciones.
+
+<div style="margin-top: 2cm;"></div>
+
+ * Es importante recalcar que todo lo presentado en este post es solo una de las varias maneras de realizar un cálculo QM/MM, y que los pasos presentados aquí reflejan un ejemplo específico basado en mi experiencia de trabajo.
 
 <div style="margin-top: 1cm;"></div>
 
-## Nota a pie de página
+### Nota a pie de página
 
 [&sect;] Las imagenes colocadas en este post sirven como ejemplos ilustrativos de una de las maneras en las que se puede trabajar con el método QM/MM.
 Para mayor información revisar el artículo publicado en la revista _Organic & Biomolecular Chemistry_ <sup>&dagger;</sup>. 
 
-## Referencia
+### Referencia
 
-<sup>&dagger;</sup> Febres-Molina, Camilo; Prat-Resina, Xavier; Jaña, Gonzalo A. 2023. “Resveratrol Glucosylation by GTF-SI from Streptococcus Mutans: Computational Insights into a GH70 Family Enzyme.” Organic & Biomolecular Chemistry 21 (48): 9591–9602.
+<sup>&dagger;</sup> *Febres-Molina, Camilo; Prat-Resina, Xavier; Jaña, Gonzalo A. 2023. “Resveratrol Glucosylation by GTF-SI from Streptococcus Mutans: Computational Insights into a GH70 Family Enzyme.” Organic & Biomolecular Chemistry 21 (48): 9591–9602.*
+</div>
