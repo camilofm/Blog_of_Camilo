@@ -14,7 +14,7 @@ body {
 text-align: justify}
 </style>
 
-```{r,out.width="40%",fig.align='center', echo=FALSE}
+```{r,out.width="30%",fig.align='center', echo=FALSE}
 knitr::include_graphics("qm-mm_white-bg.png")
 ```
 
