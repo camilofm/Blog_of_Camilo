@@ -50,13 +50,13 @@ En el contexto de la química computacional, este enfoque permite reducir los re
 
 Para realizar un cálculo QM/MM, es necesario utilizar un software especializado que permita combinar ambos enfoques, el cuántico y el molecular. Generalmente, se elige un software que se adapte bien a la naturaleza del sistema y que sea compatible con los métodos híbridos. Para comprender mejor el procedimiento, y como mencioné al inicio, colocaré un ejemplo de cálculo y metodología para el análisis de una proteína y un ligando utilizando la interfaz **Qchem-CHARMM**, que permite realizar cálculos QM/MM de manera eficiente. Qchem se encarga de la parte cuántica, donde se modelan las reacciones y los procesos que involucran cambios en los enlaces químicos, mientras que CHARMM se encarga de la parte molecular, proporcionando el contexto completo de la proteína o del sistema en su totalidad.
 
-<figure style="float: right; width: 40%; margin: 0 auto;">
-  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
-</figure>
-
 Primero, se debe definir qué parte del sistema será tratada con **QM** (generalmente el sitio activo o la región de interés donde ocurre una reacción) y qué parte se tratará con **MM** (el resto del sistema, como la proteína y el solvente). Luego, se configura la simulación con los parámetros adecuados para cada método, y se ejecuta la simulación utilizando la interfaz Qchem-CHARMM para integrar ambas partes del cálculo.
 
 Para ilustrar mejor esta combinación de ambas zonas, a la derecha se muestra la imagen de un sistema proteico y su ligando, resaltando la región **QM** (el sitio activo), mientras que el resto del sistema es tratado con **MM** indicando su contribución al cálculo. Esto ayudará a visualizar cómo se dividen las regiones y cuál es el enfoque general de cada una.
+
+<figure style="float: right; width: 40%; margin: 0 auto;">
+  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
+</figure>
 
 Debido a la gran diversidad de sistemas, enzimas y reacciones, no existe una 'receta general' para los cálculos QM/MM. En este post, a modo de ejemplo, se presentará una forma de proceder, que es la que, personalmente yo, utilizo habitualmente en mis investigaciones.
 Ésta incluye los siguientes pasos: optimizaciones geométricas, exploración de la energía potencial, búsqueda del camino de mínima energía, análisis de los resultados, y análisis de la energía y la estructura.
