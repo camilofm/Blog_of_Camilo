@@ -1,6 +1,7 @@
 ---
 title: "QM/MM: La Fusión de lo Cuántico y Molecular"
 subtitle: "Una Introducción al Alcance de Todos"
+description: "Descubre cómo la combinación de Mecánica Cuántica y Molecular permite estudiar reacciones químicas complejas, como las que ocurren en enzimas, logrando una precisión a nivel cuántico que antes era inalcanzable en sistemas de gran tamaño."
 author: "Dr. Camilo Febres Molina"
 date: "`r Sys.Date()`"
 output:
