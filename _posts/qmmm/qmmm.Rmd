@@ -3,7 +3,9 @@ title: "QM/MM: La Fusión de lo Cuántico y Molecular"
 subtitle: "Una Introducción al Alcance de Todos"
 author: "Dr. Camilo Febres Molina"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  distill::distill_article:
+    self_contained: false
 ---
 
 ## Perspectiva General

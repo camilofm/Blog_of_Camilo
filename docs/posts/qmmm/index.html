@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","comp-chem.png","cpr.png","cpr2.png","nbo.png","qm-mm_white-bg.png","qmmm_files/anchor-4.2.2/anchor.min.js","qmmm_files/bowser-1.9.3/bowser.min.js","qmmm_files/distill-2.2.21/template.v2.js","qmmm_files/header-attrs-2.29/header-attrs.js","qmmm_files/jquery-3.6.0/jquery-3.6.0.js","qmmm_files/jquery-3.6.0/jquery-3.6.0.min.js","qmmm_files/jquery-3.6.0/jquery-3.6.0.min.map","qmmm_files/popper-2.6.0/popper.min.js","qmmm_files/tippy-6.2.7/tippy-bundle.umd.min.js","qmmm_files/tippy-6.2.7/tippy-light-border.css","qmmm_files/tippy-6.2.7/tippy.css","qmmm_files/tippy-6.2.7/tippy.umd.min.js","qmmm_files/webcomponents-2.0.0/webcomponents.js","scan.png","spe.png","subsite.png"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","comp-chem.png","cpr.png","cpr2.png","nbo.png","qm-mm_white-bg.png","scan.png","spe.png","subsite.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2167,9 +2167,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <div style="text-align: justify;">
 <p>En el campo de la <strong>Química Computacional</strong>, vamos a hablar sobre un tema fascinante: los cálculos QM/MM (Quantum Mechanics/Molecular Mechanics). Esta técnica híbrida combina métodos mecano-cuánticos y mecánica molecular, lo que permite estudiar sistemas grandes de manera eficiente.</p>
 </div>
-<div style="float: right; width: 33%; margin: 0 auto; border-left: 2px solid #ccc; padding-left: 10px;">
-<p><img src="comp-chem.png" alt="Representación ilustrativa de la Química Computacional" style="max-width: 70%; height: auto;"></p>
-</div>
+<figure style="float: right; width: 33%; margin: 0 auto; border-left: 2px solid #ccc; padding-left: 10px;">
+<img src="comp-chem.png" alt="Representación ilustrativa de la Química Computacional" style="max-width: 70%; height: auto;">
+</figure>
 <div style="text-align: justify;">
 <p>A lo largo de este post, utilizaremos como ejemplo una proteína con un ligando cualquiera, pero ten en cuenta que también es posible realizar cálculos QM/MM en diversas moléculas para distintas aplicaciones, como materiales orgánicos, complejos metálicos, fármacos, e incluso sistemas catalíticos. Además, mencionaré brevemente el uso de <strong>Teoría del Funcional de la Densidad (DFT)</strong>, una metodología común en los cálculos QM que se utiliza para describir con precisión la densidad electrónica de los sistemas.</p>
 <p>En este post, te guiaré desde el principio para que puedas comprender los conceptos básicos y cómo funciona esta metodología en general. Además, veremos un ejemplo sencillo para ilustrar el funcionamiento de esta poderosa herramienta, que te será de utilidad incluso si estás empezando en el mundo de la química computacional.</p>
@@ -2188,9 +2188,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <div style="text-align: justify;">
 <p>Para realizar un cálculo QM/MM, es necesario utilizar un software especializado que permita combinar ambos enfoques, el cuántico y el molecular. Generalmente, se elige un software que se adapte bien a la naturaleza del sistema y que sea compatible con los métodos híbridos. Para comprender mejor el procedimiento, colocaré un ejemplo de cálculo y metodología para el análisis de una proteína y un ligando utilizando la interfaz <strong>Qchem-CHARMM</strong>, que permite realizar cálculos QM/MM de manera eficiente. Qchem se encarga de la parte cuántica, donde se modelan las reacciones y los procesos que involucran cambios en los enlaces químicos, mientras que CHARMM se encarga de la parte molecular, proporcionando el contexto completo de la proteína o del sistema en su totalidad.</p>
 </div>
-<div style="float: right; width: 22%; margin: 0 auto; border-left: 2px solid #ccc; padding-left: 10px;">
-<p><img src="qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;"></p>
-</div>
+<figure style="float: right; width: 22%; margin: 0 auto; border-left: 2px solid #ccc; padding-left: 10px;">
+<img src="qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
+</figure>
 <div style="text-align: justify;">
 <p>Primero, se debe definir qué parte del sistema será tratada con <strong>QM</strong> (generalmente el sitio activo o la región de interés donde ocurre una reacción) y qué parte se tratará con <strong>MM</strong> (el resto del sistema, como la proteína y el solvente). Luego, se configura la simulación con los parámetros adecuados para cada método, y se ejecuta la simulación utilizando la interfaz Qchem-CHARMM para integrar ambas partes del cálculo.</p>
 <p>Para ilustrar mejor esta combinación de ambas zonas, a la derecha se muestra la imagen de un sistema proteico y su ligando, resaltando la región <strong>QM</strong> (el sitio activo), mientras que el resto del sistema es tratado con <strong>MM</strong> indicando su contribución al cálculo. Esto ayudará a visualizar cómo se dividen las regiones y cuál es el enfoque general de cada una.</p>
@@ -2208,7 +2208,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul></li>
 </ol>
 <figure style="text-align: center;">
-<img src="cpr2.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 60%; height: auto;">
+<img src="cpr2.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 60%;">
 <figcaption style="font-style: italic;">
 Gráfico que muestra los tres puntos estacionarios de la reacción por la que pasa el camino de mínima energía: el reactivo (R), el estado de transición (TS) y el producto (P). [§]
 </figcaption>
@@ -2216,35 +2216,29 @@ Gráfico que muestra los tres puntos estacionarios de la reacción por la que pa
 <ul>
 <li><strong>Diagramas de energía</strong>: Se analizan los perfiles de energía para identificar la barrera energética asociada a la reacción y evaluar su viabilidad.</li>
 </ul>
-<div style="display: flex; justify-content: center; align-items: center; margin-left: 3cm; margin-right: 3cm;">
-<img src="scan.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 50%; padding-left: 10px;">
-<figcaption style="margin-left: 15px; font-style: italic;">
-Perfil de energía potencial vs una coordenada de reacción del ‘scan’. Esta es una aproximación inicial que nos permitirá a continuación encontrar el camino de mínima energía. [§]
+<figure style="text-align: center;">
+<img src="scan.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 50%;">
+<figcaption style="font-style: italic;">
+Perfil de energía potencial vs una coordenada de reacción del “scan”. Esta es una aproximación inicial que nos permitirá a continuación encontrar el camino de mínima energía. [§]
 </figcaption>
-</div>
-<div style="display: flex; justify-content: center; align-items: center; margin-left: 3cm; margin-right: 3cm;">
-<img src="spe.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 35%; padding-left: 10px;">
-<figcaption style="margin-left: 15px; font-style: italic;">
+</figure>
+<figure style="text-align: center;">
+<img src="spe.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 35%;">
+<figcaption style="font-style: italic;">
 Cálculo de energía puntual (single point energy, en inglés) de los puntos estacionarios. Se muestra la barrera o energía de activación (8.8 kcal/mol) de la reacción catalizada por la enzima. [§]
 </figcaption>
-</div>
+</figure>
 <ul>
 <li><strong>Análisis NBO (Natural Bond Orbital)</strong>: Se investigan las cargas de los puntos estacionarios de la reacción para entender la distribución de la carga electrónica y cómo esta influye en la reactividad del sistema.</li>
 </ul>
-<div style="display: flex; justify-content: center; align-items: center; margin-left: 3cm; margin-right: 3cm;">
-<img src="nbo.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 30%; padding-left: 10px;">
-<figcaption style="margin-left: 15px; font-style: italic;">
+<figure style="text-align: center;">
+<img src="nbo.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 30%;">
+<figcaption style="font-style: italic;">
 Estado de transición donde se muestran zonas coloreadas que indican las principales interacciones relacionadas con la reactividad. [§]
 </figcaption>
-</div>
-<div style="margin-top: 1cm;">
-
-</div>
-<h2 id="conclusión">Conclusión:</h2>
-<p>En resumen, el enfoque QM/MM nos permite estudiar sistemas complejos de manera eficiente, combinando la precisión de la mecánica cuántica con la versatilidad y menor costo computacional de la mecánica molecular. A través de los pasos descritos —desde la optimización geométrica hasta el análisis de resultados—, es posible entender en detalle el mecanismo de reacción de biomoléculas y sistemas catalíticos. Los resultados obtenidos, integrando análisis estructurales, NBO y energéticos nos brindan una visión completa del proceso reactivo, la cual puede ser comparada con otros sistemas similares para validar nuestras conclusiones. Esta poderosa metodología híbrida ha demostrado ser una herramienta fundamental para desentrañar los complejos mecanismos catalíticos enzimáticos, proporcionando información clave que puede guiar futuras investigaciones.</p>
-<ul>
-<li>Es importante recalcar que esta es solo una de las varias maneras de realizar un cálculo QM/MM, y que los pasos presentados aquí reflejan un ejemplo específico basado en mi experiencia de trabajo.</li>
-</ul>
+</figure>
+<p><strong>Conclusión</strong>: En resumen, el enfoque QM/MM nos permite estudiar sistemas complejos de manera eficiente, combinando la precisión de la mecánica cuántica con la versatilidad y menor costo computacional de la mecánica molecular. A través de los pasos descritos —desde la optimización geométrica hasta el análisis de resultados—, es posible entender en detalle el mecanismo de reacción de biomoléculas y sistemas catalíticos. Los resultados obtenidos, integrando análisis energéticos, NBO y estructurales, nos brindan una visión completa del proceso reactivo, la cual puede ser comparada con otros sistemas similares para validar nuestras conclusiones. Esta poderosa metodología híbrida ha demostrado ser una herramienta esencial para desentrañar los complejos mecanismos de la química biomolecular, proporcionando información clave que puede guiar futuras investigaciones.</p>
+<p>Es importante recalcar que esta es solo una de las varias maneras de realizar un cálculo QM/MM, y que los pasos presentados aquí reflejan un ejemplo específico basado en mi experiencia de trabajo.</p>
 </div>
 <div style="margin-top: 1cm;">
 
