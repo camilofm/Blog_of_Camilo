@@ -1,15 +1,12 @@
 ---
 title: "QM/MM: La Fusión de lo Cuántico y Molecular"
 subtitle: "Una Introducción al Alcance de Todos"
-description: "Descubre cómo la combinación de Mecánica Cuántica y Molecular permite estudiar reacciones químicas complejas, como las que ocurren en enzimas, logrando una precisión a nivel cuántico que antes era inalcanzable en sistemas de gran tamaño."
 author:
-  - name: "Dr. Camilo Febres-Molina"
-    url: "https://github.com/camilofm"
-    affiliation: "UNAB - Chile"
-date: "`r Sys.Date()`"
-output:
-  distill::distill_article:
-    self_contained: false
+  - name: Dr. Camilo Febres-Molina 
+    url: https://github.com/camilofm
+    affiliation: UNAB - Chile
+date: "2024-11-23"
+output: distill::distill_article
 ---
 
 <style>
@@ -17,7 +14,7 @@ body {
 text-align: justify}
 </style>
 
-```{r,out.width="60%",fig.align='center', echo=FALSE}
+```{r,out.width="50%",fig.align='center', echo=FALSE}
 knitr::include_graphics("qm-mm_white-bg.png")
 ```
 
@@ -87,7 +84,7 @@ Debido a la gran diversidad de sistemas, enzimas y reacciones, no existe una 're
   <figcaption style="font-style: italic;">Perfil de energía potencial vs una coordenada de reacción del "scan". Esta es una aproximación inicial que nos permitirá a continuación encontrar el camino de mínima energía. [&sect;]</figcaption>
 </figure>
 
-<div style="margin-top: 1cm;"></div>
+<div style="margin-top: 0.2cm;"></div>
 
 <figure style="text-align: center;">
   <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/spe.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto; width: 50%;">

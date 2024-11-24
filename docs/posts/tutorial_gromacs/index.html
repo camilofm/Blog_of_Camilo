@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -117,7 +118,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2022-08-25"/>
 <meta property="article:created" itemprop="dateCreated" content="2022-08-25"/>
-<meta name="article:author" content="Camilo Febres-Molina"/>
+<meta name="article:author" content="Dr. Camilo Febres-Molina"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="C3: Análisis post producción de la dinámica molecular con Gromacs - Tutorial"/>
@@ -133,12 +134,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers;citation_publication_date=2015;citation_publisher=Elsevier;citation_volume=1;citation_author=Mark James Abraham;citation_author=Teemu Murtola;citation_author=Roland Schulz;citation_author=Szilárd Páll;citation_author=Jeremy C Smith;citation_author=Berk Hess;citation_author=Erik Lindahl"/>
-  <meta name="citation_reference" content="citation_title=Heterogeneous parallelization and acceleration of molecular dynamics simulations in GROMACS;citation_publication_date=2020;citation_publisher=AIP Publishing LLC;citation_volume=153;citation_author=Szilárd Páll;citation_author=Artem Zhmurov;citation_author=Paul Bauer;citation_author=Mark Abraham;citation_author=Magnus Lundborg;citation_author=Alan Gray;citation_author=Berk Hess;citation_author=Erik Lindahl"/>
+  <meta name="citation_reference" content="citation_title=GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers;citation_publisher=Elsevier;citation_volume=1;citation_author=Mark James Abraham;citation_author=Teemu Murtola;citation_author=Roland Schulz;citation_author=Szilárd Páll;citation_author=Jeremy C Smith;citation_author=Berk Hess;citation_author=Erik Lindahl"/>
+  <meta name="citation_reference" content="citation_title=Heterogeneous parallelization and acceleration of molecular dynamics simulations in GROMACS;citation_publisher=AIP Publishing LLC;citation_volume=153;citation_author=Szilárd Páll;citation_author=Artem Zhmurov;citation_author=Paul Bauer;citation_author=Mark Abraham;citation_author=Magnus Lundborg;citation_author=Alan Gray;citation_author=Berk Hess;citation_author=Erik Lindahl"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Análisis post producción de la dinámica molecular con Gromacs - Tutorial"]},{"type":"character","attributes":{},"value":["Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["08-25-2022"]},{"type":"character","attributes":{},"value":["tutorial_gromacs.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Análisis post producción de la dinámica molecular con Gromacs - Tutorial"]},{"type":"character","attributes":{},"value":["Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Dr. Camilo Febres-Molina"]},{"type":"character","attributes":{},"value":["https://github.com/camilofm"]},{"type":"character","attributes":{},"value":["Doctorado en Fisicoquímica Molecular - UNAB - Chile"]},{"type":"character","attributes":{},"value":["https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"]}]}]},{"type":"character","attributes":{},"value":["08-25-2022"]},{"type":"character","attributes":{},"value":["tutorial_gromacs.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2131,7 +2132,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.29/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2152,7 +2153,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Análisis post producción de la dinámica molecular con Gromacs - Tutorial","description":"Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD.","authors":[{"author":"Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-08-25T00:00:00.000-04:00","citationText":"Febres-Molina, 2022"}
+{"title":"Análisis post producción de la dinámica molecular con Gromacs - Tutorial","description":"Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD.","authors":[{"author":"Dr. Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-08-25T00:00:00.000-04:00","citationText":"Febres-Molina, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2176,19 +2177,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Análisis post producción de la dinámica molecular con Gromacs - Tutorial</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Aquí veremos paso a paso cómo es que podemos utilizar la suite
-Gromacs para el análisis post producción de una dinámica molecular
-realizada con los programas Gromacs, CHARMM o NAMD.</p></p>
+<p><p>Aquí veremos paso a paso cómo es que podemos utilizar la suite Gromacs para el análisis post producción de una dinámica molecular realizada con los programas Gromacs, CHARMM o NAMD.</p></p>
 </div>
 
 <div class="d-byline">
-  Camilo Febres-Molina <a href="https://github.com/camilofm"
-class="uri">https://github.com/camilofm</a> (Doctorado en Fisicoquímica
-Molecular - UNAB - Chile)<a
-href="https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"
-class="uri">https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/</a>
+  Dr. Camilo Febres-Molina <a href="https://github.com/camilofm" class="uri">https://github.com/camilofm</a> (Doctorado en Fisicoquímica Molecular - UNAB - Chile)<a href="https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/" class="uri">https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/</a>
   
 <br/>08-25-2022
 </div>
@@ -2201,19 +2197,9 @@ text-align: justify}
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pictures/gromacs.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
-<p>Existen muchas metodologías, softwares y servidores en línea
-diseñados para analizar la trayectoria obtenida luego de la producción
-de una dinámica molecular (MD) para, así, obtener información que dé
-cuenta de la estabilidad de dicha corrida en un período específico, las
-fluctuaciones de ciertos residuos, entre otros. Sin embargo, el <a
-href="https://www.gromacs.org/">paquete de software Gromacs</a> nos
-permite, en un solo lugar, realizar todos estos análisis y muchos otros
-de forma relativamente simple y utilizando la línea de comandos <span
-class="citation" data-cites="gromacs1 gromacs2">(<a href="#ref-gromacs1"
-role="doc-biblioref">Abraham et al. 2015</a>; <a href="#ref-gromacs2"
-role="doc-biblioref">Páll et al. 2020</a>)</span>.</p>
-<p>El presente tutorial abarcará los siguientes análisis post producción
-de la MD:</p>
+<p>Existen muchas metodologías, softwares y servidores en línea diseñados para analizar la trayectoria obtenida luego de la producción de una dinámica molecular (MD) para, así, obtener información que dé cuenta de la estabilidad de dicha corrida en un período específico, las fluctuaciones de ciertos residuos, entre otros.
+Sin embargo, el <a href="https://www.gromacs.org/">paquete de software Gromacs</a> nos permite, en un solo lugar, realizar todos estos análisis y muchos otros de forma relativamente simple y utilizando la línea de comandos <span class="citation" data-cites="gromacs1 gromacs2">(<a href="#ref-gromacs1" role="doc-biblioref">Abraham et al. 2015</a>; <a href="#ref-gromacs2" role="doc-biblioref">Páll et al. 2020</a>)</span>.</p>
+<p>El presente tutorial abarcará los siguientes análisis post producción de la MD:</p>
 <ul>
 <li>RMSD</li>
 <li>RMSF, factor-B y estructura promedio</li>
@@ -2225,329 +2211,178 @@ de la MD:</p>
 <li>Enlaces de hidrógeno</li>
 </ul>
 <p style="text-align: right;">
-<h1 id="indicaciones-y-recomendaciones-iniciales">Indicaciones y
-recomendaciones iniciales</h1>
+<h1 id="indicaciones-y-recomendaciones-iniciales">Indicaciones y recomendaciones iniciales</h1>
 </p>
-<p>Antes de iniciar con los diferentes análisis se debe tener en cuenta
-que la trayectoria a utilizar sea la óptima, por ejemplo, que no
-contenga “saltos” o algunas moléculas que parecieran estar “rotas”
-debido a la periodicidad de contorno (PBC) durante la MD. Por lo que es
-una buena práctica realizar la revisión de dicha trayectoria (en algún
-visualizador, como VMD) o, en su defecto, utilizar el programa trjconv
-para restaurar dichos “saltos” o “rupturas” como veremos en el punto 2.
-A lo largo de este tutorial, y a modo de ejemplo, se utilizarán los
-siguientes archivos de entrada iniciales: coor.pdb, traj.dcd y topol.psf
-(suponiendo que son estos archivos con sus extensiones los que se
-obtuvieron al realizar la MD luego de correrlos en NAMD o AMBER, por
-ejemplo). Lo primero que se debe hacer es convertir la trayectoria
-traj.dcd a un formato que gromacs utilice y pueda manejar, como traj.trr
-o traj.xtc, por lo que a través del programa VMD, y luego de cargar toda
-la trayectoria (topol.psf + traj.dcd), se guardará dicha trayectoria (en
-“File” -&gt; “Save coordinates” -&gt; “File type”) con la extensión
-“trr”. El único inconveniente al convertir la trayectoria a este
-formato, y no obtenerlo de forma nativa (habiendo corrido la MD con
-Gromacs), es que las etiquetas de tiempo deberán corregirse luego con el
-graficador que utilicemos (por ejemplo, con Grace).</p>
-<h1 id="tratamiento-adecuado-de-la-trayectoria">Tratamiento adecuado de
-la trayectoria</h1>
-<p>El programa trjconv se utiliza básicamente para convertir la
-trayectoria trr (generalmente pesada) en otra comprimida y más manejable
-xtc. Además también se utilizará a continuación para reparar algún
-problema de PBC en la trayectoria inicial. En la misma carpeta en la que
-estén los archivos de entrada que se tienen hasta ahora (y donde debe
-estar también traj.trr) se generará un archivo pdb con las coordinadas
-del frame inicial de la trayectoria (también se puede utilizar VMD para
-esto) y se llamará coor-tpr.pdb, esto con la intención de utilizarlo en
-vez del archivo tpr que requieren todos los programas de Gromacs y que
-sirve de coordenadas de referencia. Una vez hecho esto, y en la
-mencionada carpeta, se correrá la siguiente línea de comando en la
-terminal:</p>
-<p>gmx trjconv -f traj.trr -s coor-tpr.pdb -o traj.xtc -pbc mol -ur
-compact -center</p>
-<p>-&gt; Para centrar, escoger la opción “proteína” y como salida la
-opción “sistema”. Con lo que el archivo de salida aquí será traj.xtc y
-es el que se utilizará de ahora en adelante para los siguientes
-análisis.</p>
-<p>Cabe mencionar aquí que así no existan problemas de “saltos” o
-“rupturas” en nuestra trayectoria original (traj.dcd) es una buena
-práctica utilizar las opciones -pbc mol, -ur compact y -center, ya que
-no afectarán en nada en el caso de que no se necesiten.</p>
+<p>Antes de iniciar con los diferentes análisis se debe tener en cuenta que la trayectoria a utilizar sea la óptima, por ejemplo, que no contenga “saltos” o algunas moléculas que parecieran estar “rotas” debido a la periodicidad de contorno (PBC) durante la MD.
+Por lo que es una buena práctica realizar la revisión de dicha trayectoria (en algún visualizador, como VMD) o, en su defecto, utilizar el programa trjconv para restaurar dichos “saltos” o “rupturas” como veremos en el punto 2.
+A lo largo de este tutorial, y a modo de ejemplo, se utilizarán los siguientes archivos de entrada iniciales: coor.pdb, traj.dcd y topol.psf (suponiendo que son estos archivos con sus extensiones los que se obtuvieron al realizar la MD luego de correrlos en NAMD o AMBER, por ejemplo).
+Lo primero que se debe hacer es convertir la trayectoria traj.dcd a un formato que gromacs utilice y pueda manejar, como traj.trr o traj.xtc, por lo que a través del programa VMD, y luego de cargar toda la trayectoria (topol.psf + traj.dcd), se guardará dicha trayectoria (en “File” -&gt; “Save coordinates” -&gt; “File type”) con la extensión “trr”.
+El único inconveniente al convertir la trayectoria a este formato, y no obtenerlo de forma nativa (habiendo corrido la MD con Gromacs), es que las etiquetas de tiempo deberán corregirse luego con el graficador que utilicemos (por ejemplo, con Grace).</p>
+<h1 id="tratamiento-adecuado-de-la-trayectoria">Tratamiento adecuado de la trayectoria</h1>
+<p>El programa trjconv se utiliza básicamente para convertir la trayectoria trr (generalmente pesada) en otra comprimida y más manejable xtc. Además también se utilizará a continuación para reparar algún problema de PBC en la trayectoria inicial.
+En la misma carpeta en la que estén los archivos de entrada que se tienen hasta ahora (y donde debe estar también traj.trr) se generará un archivo pdb con las coordinadas del frame inicial de la trayectoria (también se puede utilizar VMD para esto) y se llamará coor-tpr.pdb, esto con la intención de utilizarlo en vez del archivo tpr que requieren todos los programas de Gromacs y que sirve de coordenadas de referencia.
+Una vez hecho esto, y en la mencionada carpeta, se correrá la siguiente línea de comando en la terminal:</p>
+<p>gmx trjconv -f traj.trr -s coor-tpr.pdb -o traj.xtc -pbc mol -ur compact -center</p>
+<p>-&gt; Para centrar, escoger la opción “proteína” y como salida la opción “sistema”.
+Con lo que el archivo de salida aquí será traj.xtc y es el que se utilizará de ahora en adelante para los siguientes análisis.</p>
+<p>Cabe mencionar aquí que así no existan problemas de “saltos” o “rupturas” en nuestra trayectoria original (traj.dcd) es una buena práctica utilizar las opciones -pbc mol, -ur compact y -center, ya que no afectarán en nada en el caso de que no se necesiten.</p>
 <h1 id="rmsd">RMSD</h1>
-<p>Se correrá la siguiente línea de comando para generar un archivo para
-ser posteriormente graficado:</p>
+<p>Se correrá la siguiente línea de comando para generar un archivo para ser posteriormente graficado:</p>
 <p>gmx rms -f traj.xtc -s coor-tpr.pdb -o rmsd.xvg</p>
-<p>-&gt; Aquí se escogerá a la “proteína” en ambas opciones para que el
-cálculo de la desviación media cuadrática sea para esa estructura
-únicamente y no para todo el sistema. Una vez generado el archivo de
-salida rmsd.xvg se podrá utilizar un programa (por defecto el formato de
-dicho archivo es para el programa Grace) para obtener la gráfica RMSD de
-la proteína a lo largo de la MD. Como se mencionó en el punto 1, se debe
-corregir la etiqueta del tiempo en dicho graficador (que por defecto
-está en ps).</p>
-<p>Nota: En el caso de que, aún habiendo realizado el comando del punto
-2, se visualice un salto abrupto (anormal) en la gráfica del RMSD, se
-puede correr las siguientes líneas de comando para intentar arreglar el
-problema:</p>
+<p>-&gt; Aquí se escogerá a la “proteína” en ambas opciones para que el cálculo de la desviación media cuadrática sea para esa estructura únicamente y no para todo el sistema.
+Una vez generado el archivo de salida rmsd.xvg se podrá utilizar un programa (por defecto el formato de dicho archivo es para el programa Grace) para obtener la gráfica RMSD de la proteína a lo largo de la MD. Como se mencionó en el punto 1, se debe corregir la etiqueta del tiempo en dicho graficador (que por defecto está en ps).</p>
+<p>Nota: En el caso de que, aún habiendo realizado el comando del punto 2, se visualice un salto abrupto (anormal) en la gráfica del RMSD, se puede correr las siguientes líneas de comando para intentar arreglar el problema:</p>
 <ol type="i">
-<li><p>gmx trjconv -f traj.xtc -s coor-tpr.pdb -o traj_no-jump.xtc -pbc
-nojump</p></li>
-<li><p>gmx trjconv -f traj_no-jump.xtc -s coor-tpr.pdb -o traj_fit.xtc
--fit rot+trans</p></li>
+<li><p>gmx trjconv -f traj.xtc -s coor-tpr.pdb -o traj_no-jump.xtc -pbc nojump</p></li>
+<li><p>gmx trjconv -f traj_no-jump.xtc -s coor-tpr.pdb -o traj_fit.xtc -fit rot+trans</p></li>
 </ol>
 <p>Haciendo esto y luego recalculando el RMSD con:</p>
 <p>gmx rms -f traj_fit.xtc -s coor-tpr.pdb -o rmsd_fit.xvg</p>
-<p>Se obtendrá el nuevo archivo de salida rmsd_fit.xvg con el cual muy
-probablemente ya se pueda generar una gráfica RMSD corregida y sin
-saltos anormales. Sólo si éste es el caso, entonces para lo que resta
-del tutorial se deberá utilizar el archivo traj_fit.xtc cada que se vea
-traj.xtc ya que es el corregido.</p>
-<p>En el caso de que la primera gráfica (aquella generada con rmsd.xvg)
-esté sin anormalidades se utilizará el archivo traj.xtc para lo que
-resta de los análisis.</p>
-<h1 id="rmsf-factor-b-y-estructura-promedio">RMSF, factor-B y estructura
-promedio</h1>
-<p>A continuación se generarán archivos para poder graficar las
-fluctuaciones por residuo, un pdb que contiene en la columna beta la
-información sobre dichas fluctuaciones para luego poder representarlo en
-colores (en VMD, por ejemplo) y otro pdb que contendrá las coordenadas
-de la estructura promedio de la trayectoria (o segmento que se escoja de
-ella).</p>
-<p>Primero, a través de la gráfica del RMSD anterior, se seleccionará la
-parte de la trayectoria que sea estable para utilizarla. Recordar que
-por defecto Gromacs utiliza los ps como unidad de tiempo, por lo que se
-debe conocer el intervalo estable de la mencionada trayectoria en ps (se
-puede lograr esto viendo el eje x en el gráfico RMSD antes de haber
-corregido los tiempos a ns, como se mencionó en los puntos 1 y 3).</p>
+<p>Se obtendrá el nuevo archivo de salida rmsd_fit.xvg con el cual muy probablemente ya se pueda generar una gráfica RMSD corregida y sin saltos anormales. Sólo si éste es el caso, entonces para lo que resta del tutorial se deberá utilizar el archivo traj_fit.xtc cada que se vea traj.xtc ya que es el corregido.</p>
+<p>En el caso de que la primera gráfica (aquella generada con rmsd.xvg) esté sin anormalidades se utilizará el archivo traj.xtc para lo que resta de los análisis.</p>
+<h1 id="rmsf-factor-b-y-estructura-promedio">RMSF, factor-B y estructura promedio</h1>
+<p>A continuación se generarán archivos para poder graficar las fluctuaciones por residuo, un pdb que contiene en la columna beta la información sobre dichas fluctuaciones para luego poder representarlo en colores (en VMD, por ejemplo) y otro pdb que contendrá las coordenadas de la estructura promedio de la trayectoria (o segmento que se escoja de ella).</p>
+<p>Primero, a través de la gráfica del RMSD anterior, se seleccionará la parte de la trayectoria que sea estable para utilizarla. Recordar que por defecto Gromacs utiliza los ps como unidad de tiempo, por lo que se debe conocer el intervalo estable de la mencionada trayectoria en ps (se puede lograr esto viendo el eje x en el gráfico RMSD antes de haber corregido los tiempos a ns, como se mencionó en los puntos 1 y 3).</p>
 <p>Para esto, se correrá la siguiente línea de comando:</p>
-<p>gmx rmsf -f traj.xtc -s coor-tpr.pdb -oq coor_bfac.pdb -ox
-coor_avrg.pdb -o rmsf.xvg -res -b A -e B</p>
-<p>-&gt; Se deberá escoger sólo la proteína para realizar el
-cálculo.</p>
-<p>-&gt; A y B son los tiempos (en ps) del primer y último frame,
-respectivamente, para ser leídos de la trayectoria completa. Por
-ejemplo, en el caso que se tenga una trayectoria total de 10 ps
-(probablemente de 100 ns - recordar que así lee Gromacs las trayectorias
-que originalmente son dcd y se convirtieron a trr en VMD) y se sepa que
-la parte estable es a partir del ps 4.5 (ns 45) hasta el final,
-entonces, los valores de A y B para la anterior línea de comando serían
-4.5 y 10, respectivamente.</p>
-<p>De esta manera se podrá graficar el archivo de salida rmsf.xvg para
-obtener el RMSF (por residuo). Así como también se habrán generado los
-archivos coor_bfac.pdb y coor_avrg.pdb los que dan cuenta de las
-coordenadas de la proteína (de referencia - frame inicial) con el
-factor-B y coordenadas de la estructura promedio, respectivamente,
-únicamente del intervalo de la trayectoria antes escogido.</p>
+<p>gmx rmsf -f traj.xtc -s coor-tpr.pdb -oq coor_bfac.pdb -ox coor_avrg.pdb -o rmsf.xvg -res -b A -e B</p>
+<p>-&gt; Se deberá escoger sólo la proteína para realizar el cálculo.</p>
+<p>-&gt; A y B son los tiempos (en ps) del primer y último frame, respectivamente, para ser leídos de la trayectoria completa. Por ejemplo, en el caso que se tenga una trayectoria total de 10 ps (probablemente de 100 ns - recordar que así lee Gromacs las trayectorias que originalmente son dcd y se convirtieron a trr en VMD) y se sepa que la parte estable es a partir del ps 4.5 (ns 45) hasta el final, entonces, los valores de A y B para la anterior línea de comando serían 4.5 y 10, respectivamente.</p>
+<p>De esta manera se podrá graficar el archivo de salida rmsf.xvg para obtener el RMSF (por residuo). Así como también se habrán generado los archivos coor_bfac.pdb y coor_avrg.pdb los que dan cuenta de las coordenadas de la proteína (de referencia - frame inicial) con el factor-B y coordenadas de la estructura promedio, respectivamente, únicamente del intervalo de la trayectoria antes escogido.</p>
 <h1 id="radio-de-giro">Radio de giro</h1>
-<p>Calcular el radio de giro de una proteína sobre los ejes x, y, z como
-función del tiempo es útil para conocer el grado de compactación que
-pudo haber sufrido esta estructura a lo largo de la trayectoria.</p>
+<p>Calcular el radio de giro de una proteína sobre los ejes x, y, z como función del tiempo es útil para conocer el grado de compactación que pudo haber sufrido esta estructura a lo largo de la trayectoria.</p>
 <p>Se correrá la siguiente línea de comando:</p>
 <p>gmx gyrate -f traj.xtc -s coor-tpr.pdb -o rg.xvg -b A -e B</p>
 <p>-&gt; Se deberá escoger sólo la proteína.</p>
-<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto
-4.</p>
-<p>Así, esto nos arrojará un archivo de salida rg.xvg el que se podrá
-graficar.</p>
-<p>Cabe mencionar que se le llama “radio de giro” pues luego de calcular
-la ponderación por masa de cada átomo en el espacio, dichos puntos se
-comparan frame a frame con el centro de masa de toda la proteína (a modo
-de colocar esta proteína dentro de una esfera) y el “radio” resultante
-más alejado del centro es aquel que se asigna en cada frame; finalmente,
-y a groso modo, se obtienen así las dos columnas del archivo rg.xvg.</p>
-<h1 id="sasa-y-energía-libre-de-solvatación-estimada">SASA y energía
-libre de solvatación estimada</h1>
-<p>Con la siguiente línea de comando se calculará tanto el área
-superficial accesible al solvente (también conocida como superficie
-molecular de Lee-Richards) de toda la proteína, como también la energía
-libre de solvatación estimada como función del tiempo: gmx sasa -f
-traj.xtc -s coor-tpr.pdb -o sasa.xvg -odg delta-g_solv.xvg -b A -e B
--&gt; Se deberá escoger sólo la proteína. -&gt; Siendo A y B los mismos
-tiempos (en ps) utilizados en el punto 4. Con los archivos de salida
-generados, sasa.xvg y delta-g_solv.xvg, se podrá graficar la superficie
-de Lee-Richards y la energía libre de solvatación estimada (con unidades
-de kJ·mol-1·nm-2), respectivamente, dentro del intervalo de la
-trayectoria escogido.</p>
-<h1 id="mediciones-a-lo-largo-de-la-trayectoria">Mediciones a lo largo
-de la trayectoria</h1>
-<p>Existen diversas formas de realizar mediciones entre átomos, ya sean
-distancias lineales entre ellos, ángulos o diedros. Para realizar estas
-mediciones es necesario generar un archivo index.ndx con el programa
-make_ndx, así:</p>
+<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto 4.</p>
+<p>Así, esto nos arrojará un archivo de salida rg.xvg el que se podrá graficar.</p>
+<p>Cabe mencionar que se le llama “radio de giro” pues luego de calcular la ponderación por masa de cada átomo en el espacio, dichos puntos se comparan frame a frame con el centro de masa de toda la proteína (a modo de colocar esta proteína dentro de una esfera) y el “radio” resultante más alejado del centro es aquel que se asigna en cada frame; finalmente, y a groso modo, se obtienen así las dos columnas del archivo rg.xvg.</p>
+<h1 id="sasa-y-energía-libre-de-solvatación-estimada">SASA y energía libre de solvatación estimada</h1>
+<p>Con la siguiente línea de comando se calculará tanto el área superficial accesible al solvente (también conocida como superficie molecular de Lee-Richards) de toda la proteína, como también la energía libre de solvatación estimada como función del tiempo:
+gmx sasa -f traj.xtc -s coor-tpr.pdb -o sasa.xvg -odg delta-g_solv.xvg -b A -e B
+-&gt; Se deberá escoger sólo la proteína.
+-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto 4.
+Con los archivos de salida generados, sasa.xvg y delta-g_solv.xvg, se podrá graficar la superficie de Lee-Richards y la energía libre de solvatación estimada (con unidades de kJ·mol-1·nm-2), respectivamente, dentro del intervalo de la trayectoria escogido.</p>
+<h1 id="mediciones-a-lo-largo-de-la-trayectoria">Mediciones a lo largo de la trayectoria</h1>
+<p>Existen diversas formas de realizar mediciones entre átomos, ya sean distancias lineales entre ellos, ángulos o diedros.
+Para realizar estas mediciones es necesario generar un archivo index.ndx con el programa make_ndx, así:</p>
 <p>gmx make_ndx -f coor-tpr.pdb -o index.ndx</p>
-<p>-&gt; En el que se escogerán átomos o residuos que se desee medir
-creando así un “grupo nuevo” con la selección de dicho elemento. Cabe
-recordar que serán dos grupos para la medición de distancias, tres
-grupos para medir ángulos y cuatro grupos para la medición de ángulos
-diedros.</p>
+<p>-&gt; En el que se escogerán átomos o residuos que se desee medir creando así un “grupo nuevo” con la selección de dicho elemento. Cabe recordar que serán dos grupos para la medición de distancias, tres grupos para medir ángulos y cuatro grupos para la medición de ángulos diedros.</p>
 <h2 id="distancias">Distancias</h2>
-<p>Si se desea medir la distancia entre dos átomos o dos residuos, estos
-últimos por medio de su centro de masa (com), la línea de comando deberá
-ser algo así:</p>
-<p>gmx distance -f traj.xtc -s coor-tpr.pdb -n index.ndx -oav
-distance.xvg -select “com of group X plus com of group Y” -b A -e B</p>
-<p>-&gt; Donde X y Y son los grupos (que poseen un elemento cada uno)
-que se desea medir, sean éstos un par de átomos (no habrá problema con
-que se calcule el centro de masa de un átomo, pues serán las mismas
-coordenadas) o un par de residuos.</p>
-<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto
-4. De esta manera se podrá graficar el archivo de salida distance.xvg y
-así conocer la distancia entre éstos elementos a lo largo de la
-trayectoria escogida.</p>
+<p>Si se desea medir la distancia entre dos átomos o dos residuos, estos últimos por medio de su centro de masa (com), la línea de comando deberá ser algo así:</p>
+<p>gmx distance -f traj.xtc -s coor-tpr.pdb -n index.ndx -oav distance.xvg -select “com of group X plus com of group Y” -b A -e B</p>
+<p>-&gt; Donde X y Y son los grupos (que poseen un elemento cada uno) que se desea medir, sean éstos un par de átomos (no habrá problema con que se calcule el centro de masa de un átomo, pues serán las mismas coordenadas) o un par de residuos.</p>
+<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto 4.
+De esta manera se podrá graficar el archivo de salida distance.xvg y así conocer la distancia entre éstos elementos a lo largo de la trayectoria escogida.</p>
 <h2 id="ángulos">Ángulos</h2>
 <p>Para este caso, la línea de comando sería así:</p>
-<p>gmx gangle -f traj.xtc -n index -g1 angle -oav angles.xvg -group1
-“com of group X plus com of group Y plus com of group Z” -b A -e B</p>
-<p>-&gt; Donde X, Y y Z son los grupos con los elementos que se desee
-medir.</p>
-<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto
-4.</p>
+<p>gmx gangle -f traj.xtc -n index -g1 angle -oav angles.xvg -group1 “com of group X plus com of group Y plus com of group Z” -b A -e B</p>
+<p>-&gt; Donde X, Y y Z son los grupos con los elementos que se desee medir.</p>
+<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto 4.</p>
 <p>Así, se podrá graficar el archivo de salida angles.xvg.</p>
 <h2 id="diedros">Diedros</h2>
 <p>Para el caso de los diedros la línea de comandos sería algo así:</p>
-<p>gmx gangle -f traj.xtc -n index -g1 dihedral -oav dihedrals.xvg
--group1 “com of group W plus com of group X plus com of group Y plus com
-of group Z” -b A -e B</p>
+<p>gmx gangle -f traj.xtc -n index -g1 dihedral -oav dihedrals.xvg -group1 “com of group W plus com of group X plus com of group Y plus com of group Z” -b A -e B</p>
 <p>-&gt; Donde W, X, Y y Z son los grupos que se desee medir.</p>
-<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto
-4.</p>
+<p>-&gt; Siendo A y B los mismos tiempos (en ps) utilizados en el punto 4.</p>
 <p>Así, se podrá graficar el archivo de salida dihedrals.xvg.</p>
 <h1 id="estructura-secundaria">Estructura secundaria</h1>
-<p>Para el cálculo de la estructura secundaria de la proteína en función
-del tiempo se necesitará realizar la instalación de un pequeño programa
-llamado dssp, el cual se puede hacer del siguiente sitio web: <a
-href="https://swift.cmbi.umcn.nl/gv/dssp"
-class="uri">https://swift.cmbi.umcn.nl/gv/dssp</a>. Además, Gromacs
-requiere que el ejecutable de dicho programa esté localizado en
-/usr/local/bin/dssp.</p>
-<p>La siguiente línea de comando se utilizará para realizar este
-cálculo:</p>
-<p>gmx do_dssp -f traj.xtc -s coor-tpr.pdb -map ss.map -o ss.xpm -b A -e
-B</p>
-<p>-&gt; Donde el archivo de entrada ss.map es aquel que mapea los datos
-de una matriz a valores RGB que son utilizados por el programa do_dssp.
-Este archivo debe contener lo siguiente:</p>
+<p>Para el cálculo de la estructura secundaria de la proteína en función del tiempo se necesitará realizar la instalación de un pequeño programa llamado dssp, el cual se puede hacer del siguiente sitio web: <a href="https://swift.cmbi.umcn.nl/gv/dssp" class="uri">https://swift.cmbi.umcn.nl/gv/dssp</a>. Además, Gromacs requiere que el ejecutable de dicho programa esté localizado en /usr/local/bin/dssp.</p>
+<p>La siguiente línea de comando se utilizará para realizar este cálculo:</p>
+<p>gmx do_dssp -f traj.xtc -s coor-tpr.pdb -map ss.map -o ss.xpm -b A -e B</p>
+<p>-&gt; Donde el archivo de entrada ss.map es aquel que mapea los datos de una matriz a valores RGB que son utilizados por el programa do_dssp. Este archivo debe contener lo siguiente:</p>
 <dl>
 <dt>8</dt>
 <dd>
-Coil 1.0 1.0 1.0 E B-Sheet 1.0 0.0 0.0 B B-Bridge 0.0 0.0 0.0 S Bend 0.0
-0.8 0.8 T Turn 1.0 1.0 0.0 H A-Helix 0.0 0.0 1.0 G 3-Helix 1.0 0.0 1.0 I
-5-Helix 1.0 0.6 0.0
+Coil 1.0 1.0 1.0
+E B-Sheet 1.0 0.0 0.0
+B B-Bridge 0.0 0.0 0.0
+S Bend 0.0 0.8 0.8
+T Turn 1.0 1.0 0.0
+H A-Helix 0.0 0.0 1.0
+G 3-Helix 1.0 0.0 1.0
+I 5-Helix 1.0 0.6 0.0
 </dd>
 </dl>
-<p>El archivo de salida ss.xpm generado se podrá convertir a uno de
-imagen por el programa xpm2ps así:</p>
+<p>El archivo de salida ss.xpm generado se podrá convertir a uno de imagen por el programa xpm2ps así:</p>
 <p>gmx xpm2ps -f ss.xpm -di ps.m2p -o ss.eps</p>
-<p>-&gt; Donde el archivo de entrada ps.m2p es aquel que le da los
-parámetros (que se pueden modificar) al programa para generar el archivo
-de salida ss.eps. El archivo ps.m2p debe contener lo siguiente:</p>
+<p>-&gt; Donde el archivo de entrada ps.m2p es aquel que le da los parámetros (que se pueden modificar) al programa para generar el archivo de salida ss.eps. El archivo ps.m2p debe contener lo siguiente:</p>
 <p>; Command line options of xpm2ps override the parameters in this file
-black&amp;white = no ; Obsolete titlefont = Times-Roman ; A PostScript
-Font titlefontsize = 20 ; Font size (pt) legend = yes ; Show the legend
-legendfont = Times-Roman ; A PostScript Font legendlabel = ; Used when
-there is none in the .xpm legend2label = ; Used when merging two xpm’s
-legendfontsize = 14 ; Font size (pt) xbox = 2.0 ; x-size of a matrix
-element ybox = 2.0 ; y-size of a matrix element matrixspacing = 20.0 ;
-Space between 2 matrices xoffset = 0.0 ; Between matrix and bounding box
-yoffset = 0.0 ; Between matrix and bounding box x-major = 20 ; Major
-ticks on x axis every .. frames x-minor = 5 ; Id. Minor ticks
-x-firstmajor = 0 ; First frame for major tick x-majorat0 = no ; Major
-tick at first frame x-majorticklen = 8.0 ; x-majorticklength
-x-minorticklen = 4.0 ; x-minorticklength x-label = ; Used when there is
-none in the .xpm x-fontsize = 16 ; Font size (pt) x-font = Times-Roman ;
-A PostScript Font x-tickfontsize = 10 ; Font size (pt) x-tickfont =
-Helvetica ; A PostScript Font y-major = 20 y-minor = 5 y-firstmajor = 0
-y-majorat0 = no y-majorticklen = 8.0 y-minorticklen = 4.0 y-label =
-y-fontsize = 16 y-font = Times-Roman y-tickfontsize = 10 y-tickfont =
-Helvetica</p>
-<p>De esta manera, se generará el archivo de imagen ss.eps con las
-estructuras secundarias a color de la proteína a lo largo de la
-trayectoria (o intervalo escogido con las opciones -b A -e B en la
-primera línea de comandos).</p>
-<p>Para el caso del cálculo de las siguientes dos propiedades, densidad
-y enlaces de hidrógeno, se requerirá antes generar el archivo de entrada
-topol.tpr de la siguiente manera:</p>
-<p>gmx grompp -f grompp.mdp -s coor-tpr.pdb -p topol.top -o
-topol.tpr</p>
-<p>-&gt; El archivo de entrada grompp.mdp, para este caso en particular,
-no requiere de datos específicos, por lo que bastará con que contenga
-las siguientes líneas:</p>
-<p>; grompp.mdp - used as input into grompp to generate topol.tpr ;
-Parameters describing what to do, when to stop and what to save
+black&amp;white = no ; Obsolete
+titlefont = Times-Roman ; A PostScript Font
+titlefontsize = 20 ; Font size (pt)
+legend = yes ; Show the legend
+legendfont = Times-Roman ; A PostScript Font
+legendlabel = ; Used when there is none in the .xpm
+legend2label = ; Used when merging two xpm’s
+legendfontsize = 14 ; Font size (pt)
+xbox = 2.0 ; x-size of a matrix element
+ybox = 2.0 ; y-size of a matrix element
+matrixspacing = 20.0 ; Space between 2 matrices
+xoffset = 0.0 ; Between matrix and bounding box
+yoffset = 0.0 ; Between matrix and bounding box
+x-major = 20 ; Major ticks on x axis every .. frames
+x-minor = 5 ; Id. Minor ticks
+x-firstmajor = 0 ; First frame for major tick
+x-majorat0 = no ; Major tick at first frame
+x-majorticklen = 8.0 ; x-majorticklength
+x-minorticklen = 4.0 ; x-minorticklength
+x-label = ; Used when there is none in the .xpm
+x-fontsize = 16 ; Font size (pt)
+x-font = Times-Roman ; A PostScript Font
+x-tickfontsize = 10 ; Font size (pt)
+x-tickfont = Helvetica ; A PostScript Font
+y-major = 20
+y-minor = 5
+y-firstmajor = 0
+y-majorat0 = no
+y-majorticklen = 8.0
+y-minorticklen = 4.0
+y-label =
+y-fontsize = 16
+y-font = Times-Roman
+y-tickfontsize = 10
+y-tickfont = Helvetica</p>
+<p>De esta manera, se generará el archivo de imagen ss.eps con las estructuras secundarias a color de la proteína a lo largo de la trayectoria (o intervalo escogido con las opciones -b A -e B en la primera línea de comandos).</p>
+<p>Para el caso del cálculo de las siguientes dos propiedades, densidad y enlaces de hidrógeno, se requerirá antes generar el archivo de entrada topol.tpr de la siguiente manera:</p>
+<p>gmx grompp -f grompp.mdp -s coor-tpr.pdb -p topol.top -o topol.tpr</p>
+<p>-&gt; El archivo de entrada grompp.mdp, para este caso en particular, no requiere de datos específicos, por lo que bastará con que contenga las siguientes líneas:</p>
+<p>; grompp.mdp - used as input into grompp to generate topol.tpr
+; Parameters describing what to do, when to stop and what to save
 integrator = steep ; Algorithm (steep = steepest descent minimization)
-emtol = 1000.0 ; Stop minimization when the maximum force &lt; 1000.0
-kJ/mol/nm emstep = 0.01 ; Minimization step size nsteps = 50000 ;
-Maximum number of (minimization) steps to perform</p>
-<p>; Parameters describing how to find the neighbors of each atom and
-how to calculate the interactions nstlist = 1 ; Frequency to update the
-neighbor list and long range forces cutoff-scheme = Verlet ; Buffered
-neighbor searching ns_type = grid ; Method to determine neighbor list
-(simple, grid) coulombtype = PME ; Treatment of long range electrostatic
-interactions rcoulomb = 1.0 ; Short-range electrostatic cut-off rvdw =
-1.0 ; Short-range Van der Waals cut-off pbc = xyz ; Periodic Boundary
-Conditions in all 3 dimensions</p>
-<p>-&gt; Por otro lado, el archivo de entrada topol.top es indispensable
-y se podrá obtener por medio del servidor <a
-href="https://www.charmm-gui.org/"
-class="uri">https://www.charmm-gui.org/</a> → “Input generator” → “Force
-Field Converter” utilizando los archivos de entrada *psf y *crd
-extraídos de la MD. Luego, se deberá marcar la opción “Gromacs” (al
-llegar al apartado “Input Generation Options”). Finalmente, luego de
-descargar los archivos generados comprimidos (*.tgz) y dentro de la
-carpeta “Gromacs” se encontrará el archivo de topología que
-requerimos.</p>
-<p>De esta manera obtendremos el archivo topol.top necesario para los
-siguientes cálculos. Cabe mencionar que este archivo requiere también de
-los archivos generados de extensión itp que se encuentran dentro de la
-carpeta toppar.</p>
+emtol = 1000.0 ; Stop minimization when the maximum force &lt; 1000.0 kJ/mol/nm
+emstep = 0.01 ; Minimization step size
+nsteps = 50000 ; Maximum number of (minimization) steps to perform</p>
+<p>; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
+nstlist = 1 ; Frequency to update the neighbor list and long range forces
+cutoff-scheme = Verlet ; Buffered neighbor searching
+ns_type = grid ; Method to determine neighbor list (simple, grid)
+coulombtype = PME ; Treatment of long range electrostatic interactions
+rcoulomb = 1.0 ; Short-range electrostatic cut-off
+rvdw = 1.0 ; Short-range Van der Waals cut-off
+pbc = xyz ; Periodic Boundary Conditions in all 3 dimensions</p>
+<p>-&gt; Por otro lado, el archivo de entrada topol.top es indispensable y se podrá obtener por medio del servidor <a href="https://www.charmm-gui.org/" class="uri">https://www.charmm-gui.org/</a> → “Input generator” → “Force Field Converter” utilizando los archivos de entrada *psf y *crd extraídos de la MD. Luego, se deberá marcar la opción “Gromacs” (al llegar al apartado “Input Generation Options”). Finalmente, luego de descargar los archivos generados comprimidos (*.tgz) y dentro de la carpeta “Gromacs” se encontrará el archivo de topología que requerimos.</p>
+<p>De esta manera obtendremos el archivo topol.top necesario para los siguientes cálculos. Cabe mencionar que este archivo requiere también de los archivos generados de extensión itp que se encuentran dentro de la carpeta toppar.</p>
 <h1 id="densidad">Densidad</h1>
-<p>Respecto a este parámetro, a veces se requiere conocer la densidad de
-todo el sistema o de alguna de las partes del mismo (sobre todo en el
-caso de simulación de proteínas con membranas lipídicas), por lo que
-para tal motivo se utilizará la siguiente línea de comando:</p>
+<p>Respecto a este parámetro, a veces se requiere conocer la densidad de todo el sistema o de alguna de las partes del mismo (sobre todo en el caso de simulación de proteínas con membranas lipídicas), por lo que para tal motivo se utilizará la siguiente línea de comando:</p>
 <p>gmx density -f traj.xtc -s topol.tpr -o density.xvg -b A -e B</p>
-<p>-&gt; Aquí utilizaremos el archivo de entrada recientemente generado
-topol.tpr El resultado será el archivo de salida density.xvg el que
-contiene la información de la densidad a lo largo de la trayectoria
-escogida.</p>
+<p>-&gt; Aquí utilizaremos el archivo de entrada recientemente generado topol.tpr
+El resultado será el archivo de salida density.xvg el que contiene la información de la densidad a lo largo de la trayectoria escogida.</p>
 <h1 id="enlaces-de-hidrógeno">Enlaces de hidrógeno</h1>
-<p>Se podrá calcular la cantidad de enlaces como función del tiempo
-utilizando la siguiente línea de comando:</p>
-<p>gmx hbond -f traj.xtc -s topol.tpr -num hbnum.xvg -dist hbdist.xvg
--ang hbang.xvg -dan danum.xvg -b A -e B</p>
-<p>-&gt; Aquí utilizaremos el archivo de entrada recientemente generado
-topol.tpr</p>
-<p>-&gt; El archivo de salida hbnum.xvg contendrá el número total de
-enlaces de hidrógeno por frame a lo largo de la trayectoria
-escogida.</p>
-<p>-&gt; Los archivos de salida hbdist.xvg y hbang.xvg contendrán la
-distribución de la distancia y de los ángulos, respectivamente, para
-todos los enlaces de hidrógeno.</p>
-<p>-&gt; El archivo de salida danum.xvg contendrá el número de dadores y
-aceptores analizados en cada frame de la trayectoria escogida.</p>
-<p>De esta manera se podrán graficar los archivos xvg relacionados con
-el cálculo de los enlaces de hidrógeno.</p>
-<p>Finalmente, cabe mencionar que se puede utilizar el programa make_ndx
-para seleccionar diversos átomos, residuos o incluso una mezcla entre
-éstos y generar grupos que se guardarán en el archivo de salida
-index.ndx, el que se podrá utilizar en todos los análisis vistos en el
-presente tutorial, en el caso que así lo requiramos, adicionando a la
-línea de comandos lo siguiente: -n index.ndx.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="doc-bibliography">
-<div id="ref-gromacs1" class="csl-entry" role="doc-biblioentry">
-Abraham, Mark James, Teemu Murtola, Roland Schulz, Szilárd Páll, Jeremy
-C Smith, Berk Hess, and Erik Lindahl. 2015. <span>“GROMACS: High
-Performance Molecular Simulations Through Multi-Level Parallelism from
-Laptops to Supercomputers.”</span> <em>SoftwareX</em> 1: 19–25.
+<p>Se podrá calcular la cantidad de enlaces como función del tiempo utilizando la siguiente línea de comando:</p>
+<p>gmx hbond -f traj.xtc -s topol.tpr -num hbnum.xvg -dist hbdist.xvg -ang hbang.xvg -dan danum.xvg -b A -e B</p>
+<p>-&gt; Aquí utilizaremos el archivo de entrada recientemente generado topol.tpr</p>
+<p>-&gt; El archivo de salida hbnum.xvg contendrá el número total de enlaces de hidrógeno por frame a lo largo de la trayectoria escogida.</p>
+<p>-&gt; Los archivos de salida hbdist.xvg y hbang.xvg contendrán la distribución de la distancia y de los ángulos, respectivamente, para todos los enlaces de hidrógeno.</p>
+<p>-&gt; El archivo de salida danum.xvg contendrá el número de dadores y aceptores analizados en cada frame de la trayectoria escogida.</p>
+<p>De esta manera se podrán graficar los archivos xvg relacionados con el cálculo de los enlaces de hidrógeno.</p>
+<p>Finalmente, cabe mencionar que se puede utilizar el programa make_ndx para seleccionar diversos átomos, residuos o incluso una mezcla entre éstos y generar grupos que se guardarán en el archivo de salida index.ndx, el que se podrá utilizar en todos los análisis vistos en el presente tutorial, en el caso que así lo requiramos, adicionando a la línea de comandos lo siguiente: -n index.ndx.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-gromacs1" class="csl-entry" role="listitem">
+Abraham, Mark James, Teemu Murtola, Roland Schulz, Szilárd Páll, Jeremy C Smith, Berk Hess, and Erik Lindahl. 2015. <span>“GROMACS: High Performance Molecular Simulations Through Multi-Level Parallelism from Laptops to Supercomputers.”</span> <em>SoftwareX</em> 1: 19–25.
 </div>
-<div id="ref-gromacs2" class="csl-entry" role="doc-biblioentry">
-Páll, Szilárd, Artem Zhmurov, Paul Bauer, Mark Abraham, Magnus Lundborg,
-Alan Gray, Berk Hess, and Erik Lindahl. 2020. <span>“Heterogeneous
-Parallelization and Acceleration of Molecular Dynamics Simulations in
-GROMACS.”</span> <em>The Journal of Chemical Physics</em> 153 (13):
-134110.
+<div id="ref-gromacs2" class="csl-entry" role="listitem">
+Páll, Szilárd, Artem Zhmurov, Paul Bauer, Mark Abraham, Magnus Lundborg, Alan Gray, Berk Hess, and Erik Lindahl. 2020. <span>“Heterogeneous Parallelization and Acceleration of Molecular Dynamics Simulations in GROMACS.”</span> <em>The Journal of Chemical Physics</em> 153 (13): 134110.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
