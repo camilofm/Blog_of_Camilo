@@ -45,7 +45,7 @@ Para realizar un cálculo QM/MM, es necesario utilizar un software especializado
 </div>
 
 <div style="float: right; width: 22%; margin: 0 auto; border-left: 2px solid #ccc; padding-left: 10px;">
-  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/QMMM/qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
+  <img src="/home/camilo/Documents/Camilo/personal/GitHub/C3/_posts/qmmm/qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
 </div>
 
 <div style="text-align: justify;">
