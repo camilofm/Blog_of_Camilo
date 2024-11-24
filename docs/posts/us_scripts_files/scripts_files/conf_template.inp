@@ -1,0 +1,56 @@
+!Configuracion para crear esfera con zonas definidas, para hacer umbrella
+
+bomlev -1
+
+set d .
+set stream ~/utils/stream
+set input RRR
+set output RRR
+
+stream toppar_wo.str
+
+open read form unit 1 name ~/umbrella/gtfwt_cryst.psf
+READ psf card unit 1
+close unit 1
+
+open read form unit 1 name ~/umbrella/prod.crd
+READ coord card unit 1
+close unit 1
+
+! .1define the substrate stereocenter as the origin of coordinates
+define cntr1 sele segid HETA .and. type C1 end
+
+! .2moving
+coor stat sele cntr1 end
+coor translate xdir -?xave ydir -?yave zdir -?zave sele all end
+
+! .3checking center
+coor stat sele cntr1 end
+
+open read unit 3 file name ~/umbrella/path.dcd
+read coord file unit 3 ifile TTT
+close unit 3
+
+dele atom sele .byres. ( .not. ( point 0.0 0.0 0.0 cut 30.0)) end
+
+!-----------regions
+set xcen     0.0
+set ycen     0.0
+set zcen     0.0
+set rsphere 25.0         ! radius of the spherical region of interest
+set rexcl    2.0         ! water exclusion radius
+set rgeo     4.0         ! to setup the MMFP potential
+calc rwater  = @rsphere - @rexcl
+calc rdroff  = @rsphere - @rgeo
+set temp   310.0 !for lang region
+
+
+stream @stream/writeall.inp
+
+stream @stream/input.inp
+
+stream makenew_reg.inp
+stream makenew_cns.inp  
+
+end
+

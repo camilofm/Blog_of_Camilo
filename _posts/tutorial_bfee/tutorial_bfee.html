@@ -132,7 +132,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=BFEE: A user-friendly graphical interface facilitating absolute binding free-energy calculations;citation_publication_date=2018;citation_publisher=ACS Publications;citation_volume=58;citation_author=Haohao Fu;citation_author=James C Gumbart;citation_author=Haochuan Chen;citation_author=Xueguang Shao;citation_author=Wensheng Cai;citation_author=Christophe Chipot"/>
+  <meta name="citation_reference" content="citation_title=BFEE: A user-friendly graphical interface facilitating absolute binding free-energy calculations;citation_publisher=ACS Publications;citation_volume=58;citation_author=Haohao Fu;citation_author=James C Gumbart;citation_author=Haochuan Chen;citation_author=Xueguang Shao;citation_author=Wensheng Cai;citation_author=Christophe Chipot"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
@@ -212,6 +212,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -252,9 +253,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -349,6 +362,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1110,6 +1128,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1187,8 +1211,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1214,12 +1239,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1284,15 +1310,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1491,7 +1523,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="tutorial_bfee_files/header-attrs-2.16/header-attrs.js"></script>
+  <script src="tutorial_bfee_files/header-attrs-2.27/header-attrs.js"></script>
   <script src="tutorial_bfee_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="tutorial_bfee_files/popper-2.6.0/popper.min.js"></script>
   <link href="tutorial_bfee_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1512,7 +1544,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso","description":"Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el &Delta;Gº de unión por medio del Potencial de Fuerza Medio (PMF).","authors":[{"author":"Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-09-01T00:00:00.000-05:00","citationText":"Febres-Molina, 2022"}
+{"title":"Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso","description":"Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el &Delta;Gº de unión por medio del Potencial de Fuerza Medio (PMF).","authors":[{"author":"Camilo Febres-Molina","authorURL":"https://github.com/camilofm","affiliation":"Doctorado en Fisicoquímica Molecular - UNAB - Chile","affiliationURL":"https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/","orcidID":""}],"publishedDate":"2022-09-01T00:00:00.000-04:00","citationText":"Febres-Molina, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1523,20 +1555,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Estimador de Energía Libre de Unión para sistemas proteína-ligando (BFEE - Plugin de VMD): Tutorial de uso</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera
-sencilla para generar archivos de entrada y así poder correr los
-cálculos MD del sistema en estudio y así obtener el ΔGº de unión por
-medio del Potencial de Fuerza Medio (PMF).</p></p>
+<p><p>Aquí veremos cómo utilizar el Plugin BFEE de VMD de manera sencilla para generar archivos de entrada y así poder correr los cálculos MD del sistema en estudio y así obtener el ΔGº de unión por medio del Potencial de Fuerza Medio (PMF).</p></p>
 </div>
 
 <div class="d-byline">
-  Camilo Febres-Molina <a href="https://github.com/camilofm"
-class="uri">https://github.com/camilofm</a> (Doctorado en Fisicoquímica
-Molecular - UNAB - Chile)<a
-href="https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/"
-class="uri">https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/</a>
+  Camilo Febres-Molina <a href="https://github.com/camilofm" class="uri">https://github.com/camilofm</a> (Doctorado en Fisicoquímica Molecular - UNAB - Chile)<a href="https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/" class="uri">https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-molecular/</a>
   
 <br/>09-01-2022
 </div>
@@ -1546,108 +1572,42 @@ class="uri">https://investigacion.unab.cl/doctorados/doctorado-en-fisicoquimica-
 body {
 text-align: justify}
 </style>
-<p><em>Este tutorial fue realizado en colaboración con <a
-href="https://scholar.google.com.pe/citations?user=cM-RWEYAAAAJ&amp;hl=es&amp;oi=ao">Leslie
-Sanchez</a>.</em></p>
+<p><em>Este tutorial fue realizado en colaboración con <a href="https://scholar.google.com.pe/citations?user=cM-RWEYAAAAJ&amp;hl=es&amp;oi=ao">Leslie Sanchez</a>.</em></p>
 <p><br/></p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pictures/bfee.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<p>El plugin BFEE permite la generación de archivos de entrada para
-realizar el cálculo de ΔG absoluto de unión en NAMD usando variables
-colectivas <span class="citation" data-cites="bfee">(<a href="#ref-bfee"
-role="doc-biblioref">Fu et al. 2018</a>)</span>. Los archivos de entrada
-se generan en el software VMD, con lo cual se generarán los archivos
-necesarios para realizar los cálculos de 8 carpetas. Posteriormente, el
-plugin permite el procesamiento de los datos.</p>
-<p>El plugin se debe descargar desde la SI del artículo colocado en la
-sección final de Referencias, y que titula: <a
-href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00695">“BFEE: A
-User-Friendly Graphical Interface Facilitating Absolute Binding
-Free-Energy Calculations”.</a></p>
-<p>En la SI también se encuentran las instrucciones de instalación tanto
-para Windows como para Linux y OSX. (En nuestra experiencia este Plugin
-responde mejor en Ubuntu que en Windows.)</p>
+<p>El plugin BFEE permite la generación de archivos de entrada para realizar el cálculo de ΔG absoluto de unión en NAMD usando variables colectivas <span class="citation" data-cites="bfee">(<a href="#ref-bfee" role="doc-biblioref">Fu et al. 2018</a>)</span>. Los archivos de entrada se generan en el software VMD, con lo cual se generarán los archivos necesarios para realizar los cálculos de 8 carpetas. Posteriormente, el plugin permite el procesamiento de los datos.</p>
+<p>El plugin se debe descargar desde la SI del artículo colocado en la sección final de Referencias, y que titula: <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00695">“BFEE: A User-Friendly Graphical Interface Facilitating Absolute Binding Free-Energy Calculations”.</a></p>
+<p>En la SI también se encuentran las instrucciones de instalación tanto para Windows como para Linux y OSX. (En nuestra experiencia este Plugin responde mejor en Ubuntu que en Windows.)</p>
 <h1 id="generación-de-inputs">Generación de inputs:</h1>
-<p>Una vez instalado el plugin en VMD aparecerá en “extensions → my
-plugins → BFEE”. Para su uso es necesario tener archivos del sistema a
-trabajar equilibrado, ya que para generar los inputs se requieren los
-siguientes archivos del sistema → *.psf, *.coor, *.vel, *.xsc y los
-archivos de parámetros necesarios para el sistema en cuestión.</p>
-<p>El plugin es bastante user-friendly, por lo que, al abrirlo se
-entiende dónde hay que poner los archivos requeridos, luego hay que
-pinchar la opción “generar inputs”, a partir de lo cual se generarán 8
-carpetas, las cuales se deben transferir al cluster donde esté instalado
-NAMD.</p>
+<p>Una vez instalado el plugin en VMD aparecerá en “extensions → my plugins → BFEE”. Para su uso es necesario tener archivos del sistema a trabajar equilibrado, ya que para generar los inputs se requieren los siguientes archivos del sistema → *.psf, *.coor, *.vel, *.xsc y los archivos de parámetros necesarios para el sistema en cuestión.</p>
+<p>El plugin es bastante user-friendly, por lo que, al abrirlo se entiende dónde hay que poner los archivos requeridos, luego hay que pinchar la opción “generar inputs”, a partir de lo cual se generarán 8 carpetas, las cuales se deben transferir al cluster donde esté instalado NAMD.</p>
 <h1 id="correr-los-archivos-en-namd">Correr los archivos en NAMD:</h1>
-<p>En cada carpeta habrá un archivo de configuración “abf.conf” que es
-el que contiene la información para correr el cálculo, del cual no es
-necesario modificar nada.</p>
-<p>Además, en cada carpeta existe el archivo colvar.in, que tiene la
-información de las variables colectivas. Luego de algunos ensayos se
-observó que es necesario agregar los keywords “lowerWall” y “upperWall”
-luego de la información de lower y upperboundary, (los valores de los
-keywords mencionados deben ser iguales, como se muestra a continuación
-en un ejemplo:</p>
+<p>En cada carpeta habrá un archivo de configuración “abf.conf” que es el que contiene la información para correr el cálculo, del cual no es necesario modificar nada.</p>
+<p>Además, en cada carpeta existe el archivo colvar.in, que tiene la información de las variables colectivas. Luego de algunos ensayos se observó que es necesario agregar los keywords “lowerWall” y “upperWall” luego de la información de lower y upperboundary, (los valores de los keywords mencionados deben ser iguales, como se muestra a continuación en un ejemplo:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pictures/ejemplo.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<p>Con esto listo se deben correr las carpetas desde la 001 a la 008 de
-forma sucesiva.</p>
-<p><strong>Nota</strong>: Considerar lo siguiente, la carpeta 007
-consiste de una solvatación extra del sistema, por lo cual el plugin
-construye un nuevo psf y pdb donde la caja de agua es más extensa en
-tamaño, con lo cual crece el número de átomos (en algunos casos al
-triple). De esto se ha observado que en proteínas donde el número de
-átomos supere los ~150 - 200 mil átomos, el cálculo no se llevará a
-cabo, dado que se generan errores (al menos en la versión de NAMD que se
-tiene actualmente instalada en el cluster UDEC) por lo cual será
-necesario hacer modificaciones en el archivo de la carpeta 007 en caso
-de que se genere una proteína con un número de átomos muy grande.</p>
-<p>Se ha seguido la siguiente metodología en carpeta 007 para llevar a
-cabo el cálculo:</p>
-<p>Tomando como base el archivo bound.psf, bound.coor.pdb (carpeta
-007_r), los archivos solvated.psf y solvated.pdb, ligand.pdb y
-protein.pdb fueron editados para reducir la cantidad de átomos (remover
-las moléculas de agua adicionales). Por lo que se realizó lo
-siguiente:</p>
+<p>Con esto listo se deben correr las carpetas desde la 001 a la 008 de forma sucesiva.</p>
+<p><strong>Nota</strong>: Considerar lo siguiente, la carpeta 007 consiste de una solvatación extra del sistema, por lo cual el plugin construye un nuevo psf y pdb donde la caja de agua es más extensa en tamaño, con lo cual crece el número de átomos (en algunos casos al triple). De esto se ha observado que en proteínas donde el número de átomos supere los ~150 - 200 mil átomos, el cálculo no se llevará a cabo, dado que se generan errores (al menos en la versión de NAMD que se tiene actualmente instalada en el cluster UDEC) por lo cual será necesario hacer modificaciones en el archivo de la carpeta 007 en caso de que se genere una proteína con un número de átomos muy grande.</p>
+<p>Se ha seguido la siguiente metodología en carpeta 007 para llevar a cabo el cálculo:</p>
+<p>Tomando como base el archivo bound.psf, bound.coor.pdb (carpeta 007_r), los archivos solvated.psf y solvated.pdb, ligand.pdb y protein.pdb fueron editados para reducir la cantidad de átomos (remover las moléculas de agua adicionales). Por lo que se realizó lo siguiente:</p>
 <ol type="i">
-<li><p>Los archivos bound.psf, bound.coor.pdb, se copiaron a
-solvated.psf y solvated.pdb. En el archivo solvated.pdb se agregó 1.00
-en la columna A.</p></li>
-<li><p>Se tomó ligand.pdb de la carpeta 006 y se copió por ligand.pdb en
-la carpeta 007_r. Se agregó 1.00 en la columna A.</p></li>
-<li><p>Se tomó protein.pdb de la carpeta 006 y se copió por protein.pdb
-en carpeta 007_r. Se agregó 1.00 en la columna A.</p></li>
-<li><p>Debido a que el archivo solvated.pdb ahora es un sistema más
-pequeño se deben cambiar los valores de tamaño de celda en el archivo
-abf.conf, para lo cual se utiliza VMD para calcular los valores de celda
-y centro del sistema (tkconsole, comandos measure minmax y measure
-center).</p></li>
+<li><p>Los archivos bound.psf, bound.coor.pdb, se copiaron a solvated.psf y solvated.pdb. En el archivo solvated.pdb se agregó 1.00 en la columna A.</p></li>
+<li><p>Se tomó ligand.pdb de la carpeta 006 y se copió por ligand.pdb en la carpeta 007_r. Se agregó 1.00 en la columna A.</p></li>
+<li><p>Se tomó protein.pdb de la carpeta 006 y se copió por protein.pdb en carpeta 007_r. Se agregó 1.00 en la columna A.</p></li>
+<li><p>Debido a que el archivo solvated.pdb ahora es un sistema más pequeño se deben cambiar los valores de tamaño de celda en el archivo abf.conf, para lo cual se utiliza VMD para calcular los valores de celda y centro del sistema (tkconsole, comandos measure minmax y measure center).</p></li>
 </ol>
 <h1 id="procesamiento-de-datos">Procesamiento de datos:</h1>
-<p>Una vez finalizado el cálculo en las 8 carpetas se observará que cada
-carpeta contiene una carpeta “output” donde se fueron escribiendo
-diferentes archivos de salida, entre ellos una trayectoria *.dcd y el
-archivo que permitirá obtener el valor de energía libre, *.czar.pmf, los
-cuales se deben cargar en la ventana del plugin “analyze” y luego
-pinchar “compute binding free energy” con lo cual se obtendrá el valor
-final de energía libre absoluta (a continuación se incluye una imagen de
-la ventana del plugin donde se deben cargar los respectivos
-outputs).</p>
+<p>Una vez finalizado el cálculo en las 8 carpetas se observará que cada carpeta contiene una carpeta “output” donde se fueron escribiendo diferentes archivos de salida, entre ellos una trayectoria *.dcd y el archivo que permitirá obtener el valor de energía libre, *.czar.pmf, los cuales se deben cargar en la ventana del plugin “analyze” y luego pinchar “compute binding free energy” con lo cual se obtendrá el valor final de energía libre absoluta (a continuación se incluye una imagen de la ventana del plugin donde se deben cargar los respectivos outputs).</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pictures/resultado.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="doc-bibliography">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-bfee" class="csl-entry" role="doc-biblioentry">
-Fu, Haohao, James C Gumbart, Haochuan Chen, Xueguang Shao, Wensheng Cai,
-and Christophe Chipot. 2018. <span>“BFEE: A User-Friendly Graphical
-Interface Facilitating Absolute Binding Free-Energy
-Calculations.”</span> <em>Journal of Chemical Information and
-Modeling</em> 58 (3): 556–60.
+Fu, Haohao, James C Gumbart, Haochuan Chen, Xueguang Shao, Wensheng Cai, and Christophe Chipot. 2018. <span>“BFEE: A User-Friendly Graphical Interface Facilitating Absolute Binding Free-Energy Calculations.”</span> <em>Journal of Chemical Information and Modeling</em> 58 (3): 556–60.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

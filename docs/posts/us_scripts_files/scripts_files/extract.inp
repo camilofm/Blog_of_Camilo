@@ -1,0 +1,35 @@
+bomlev -1
+set d .
+set stream ~/utils/stream
+!set input RRR
+!set input 14
+!set output RRR
+set output x_prod
+
+stream toppar_wo.str
+
+open read form unit 1 name ../gtfwt_cryst.psf
+READ psf card unit 1
+close unit 1
+
+open read form unit 1 name ../prod.crd
+READ coord card unit 1
+close unit 1
+
+! .1define the substrate stereocenter as the origin of coordinates
+define cntr1 sele segid HETA .and. type C1 end
+
+! .2moving
+coor stat sele cntr1 end
+coor translate xdir -?xave ydir -?yave zdir -?zave sele all end
+
+! .3checking center
+coor stat sele cntr1 end
+
+open read unit 3 file name ../path.dcd
+!read coord file unit 3 ifile TTT
+read coord file unit 3 ifile 18
+close unit 3
+
+stream @stream/writeall.inp
+end
