@@ -1543,35 +1543,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="perspectiva-general">Perspectiva General</h2>
-<div style="text-align: justify;">
-<p>En el campo de la <strong>Química Computacional</strong>, vamos a hablar sobre un tema fascinante: los cálculos QM/MM (Quantum Mechanics/Molecular Mechanics). Esta técnica híbrida combina métodos mecano-cuánticos y mecánica molecular, lo que permite estudiar sistemas grandes de manera eficiente.</p>
+<style>
+body {
+text-align: justify}
+</style>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="qm-mm_white-bg.png" width="40%" style="display: block; margin: auto;" /></p>
 </div>
+<h2 id="perspectiva-general">Perspectiva General</h2>
+<p>En el campo de la <strong>Química Computacional</strong>, vamos a hablar sobre un tema fascinante: los cálculos QM/MM (Quantum Mechanics/Molecular Mechanics). Esta técnica híbrida combina métodos mecano-cuánticos y mecánica molecular, lo que permite estudiar sistemas grandes de manera eficiente.</p>
 <figure style="float: right; width: 55%; margin: 0 auto;">
 <img src="comp-chem.png" alt="Representación ilustrativa de la Química Computacional" style="max-width: 70%; height: auto;">
 </figure>
-<div style="text-align: justify;">
 <p>A lo largo de este post, utilizaremos como ejemplo una proteína con un ligando cualquiera, pero ten en cuenta que también es posible realizar cálculos QM/MM en diversas moléculas para distintas aplicaciones, como materiales orgánicos, complejos metálicos, fármacos, e incluso sistemas catalíticos. Además, mencionaré brevemente el uso de <strong>Teoría del Funcional de la Densidad (DFT)</strong>, una metodología común en los cálculos QM que se utiliza para describir con precisión la densidad electrónica de los sistemas.</p>
 <p>En este post, te guiaré desde el principio para que puedas comprender los conceptos básicos y cómo funciona esta metodología en general. Además, veremos un ejemplo sencillo para ilustrar el funcionamiento de esta poderosa herramienta, que te será de utilidad incluso si estás empezando en el mundo de la química computacional.</p>
 <p>¡Espero que disfrutes este viaje hacia la comprensión de una de las técnicas más útiles y emocionantes en el estudio de biomoléculas!</p>
-</div>
 <h2 id="comencemos-con-lo-fundamental-qué-es-qmmm">Comencemos con lo fundamental: ¿Qué es QM/MM?</h2>
-<div style="text-align: justify;">
 <p>El enfoque QM/MM combina dos metodologías, <strong>Mecánica Cuántica (QM)</strong> y <strong>Mecánica Molecular (MM)</strong>, ambas de gran importancia para entender la dinámica de sistemas complejos:</p>
 <ul>
 <li><p><strong>Mecánica Cuántica (QM)</strong>: Se utiliza para modelar una parte del sistema donde los efectos cuánticos son importantes, como en la reacción química de un sitio activo de una enzima. Aquí, se consideran explícitamente las rupturas y formaciones de enlaces químicos, lo cual es esencial para describir reacciones químicas de manera precisa. Por ejemplo, en una enzima, los enlaces del sustrato pueden romperse o formarse durante la reacción, y estos cambios solo pueden describirse con precisión utilizando la mecánica cuántica, ya que implican la redistribución de densidad electrónica (la distribución de los electrones en el espacio) y la creación de nuevos estados electrónicos (como la formación de nuevos enlaces). En este contexto, la <strong>Teoría del Funcional de la Densidad (DFT)</strong> es una técnica ampliamente utilizada que permite describir la densidad electrónica de manera eficiente y con un buen equilibrio entre precisión y costo computacional.</p></li>
 <li><p><strong>Mecánica Molecular (MM)</strong>: Debido al costo computacional elevado en el cálculo QM, se usa la mecánica molecular para el resto del sistema, que generalmente incluye una gran cantidad de átomos (como un solvente o el resto de la proteína), de manera menos costosa computacionalmente. La mecánica molecular se encarga de modelar las interacciones de corto y largo alcance de estos átomos mediante potenciales clásicos. Las interacciones de corto alcance incluyen fuerzas como las repulsivas y atractivas de Van der Waals, mientras que las de largo alcance comprenden interacciones electrostáticas. Para tratar estas interacciones de largo alcance de manera eficiente, se utilizan algoritmos como el <strong>PME (Particle Mesh Ewald)</strong>, que permite calcular las fuerzas electrostáticas con alta precisión, incluso para sistemas muy grandes.</p></li>
 </ul>
 <p>En el contexto de la química computacional, este enfoque permite reducir los requisitos de recursos al tiempo que mantiene la precisión para estudiar la parte más relevante del sistema.</p>
-</div>
 <h2 id="cómo-se-realiza-un-cálculo-qmmm">¿Cómo se realiza un cálculo QM/MM?</h2>
-<div style="text-align: justify;">
 <p>Para realizar un cálculo QM/MM, es necesario utilizar un software especializado que permita combinar ambos enfoques, el cuántico y el molecular. Generalmente, se elige un software que se adapte bien a la naturaleza del sistema y que sea compatible con los métodos híbridos. Para comprender mejor el procedimiento, colocaré un ejemplo de cálculo y metodología para el análisis de una proteína y un ligando utilizando la interfaz <strong>Qchem-CHARMM</strong>, que permite realizar cálculos QM/MM de manera eficiente. Qchem se encarga de la parte cuántica, donde se modelan las reacciones y los procesos que involucran cambios en los enlaces químicos, mientras que CHARMM se encarga de la parte molecular, proporcionando el contexto completo de la proteína o del sistema en su totalidad.</p>
-</div>
 <figure style="float: right; width: 40%; margin: 0 auto;">
 <img src="qm-mm_white-bg.png" alt="Representación de una proteína con regiones QM y MM resaltadas" style="max-width: 100%; height: auto;">
 </figure>
-<div style="text-align: justify;">
 <p>Primero, se debe definir qué parte del sistema será tratada con <strong>QM</strong> (generalmente el sitio activo o la región de interés donde ocurre una reacción) y qué parte se tratará con <strong>MM</strong> (el resto del sistema, como la proteína y el solvente). Luego, se configura la simulación con los parámetros adecuados para cada método, y se ejecuta la simulación utilizando la interfaz Qchem-CHARMM para integrar ambas partes del cálculo.</p>
 <p>Para ilustrar mejor esta combinación de ambas zonas, a la derecha se muestra la imagen de un sistema proteico y su ligando, resaltando la región <strong>QM</strong> (el sitio activo), mientras que el resto del sistema es tratado con <strong>MM</strong> indicando su contribución al cálculo. Esto ayudará a visualizar cómo se dividen las regiones y cuál es el enfoque general de cada una.</p>
 <p>Debido a la gran diversidad de sistemas, enzimas y reacciones, no existe una ‘receta general’ para los cálculos QM/MM. En este post, a modo de ejemplo, se presentará una forma de proceder, que es la que, personalmente yo, utilizo habitualmente en mis investigaciones.
@@ -1636,7 +1634,6 @@ Estado de transición de la reacción donde se muestran zonas coloreadas que ind
 Para mayor información revisar el artículo publicado en la revista <em>Organic &amp; Biomolecular Chemistry</em> <sup>†</sup>.</p>
 <h3 id="referencia">Referencia</h3>
 <p><sup>†</sup> <em>Febres-Molina, Camilo; Prat-Resina, Xavier; Jaña, Gonzalo A. 2023. “Resveratrol Glucosylation by GTF-SI from Streptococcus Mutans: Computational Insights into a GH70 Family Enzyme.” Organic &amp; Biomolecular Chemistry 21 (48): 9591–9602.</em></p>
-</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
